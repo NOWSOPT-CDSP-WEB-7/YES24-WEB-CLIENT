@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "postcss": "^8.4.38",
+    "postcss-styled-syntax": "^0.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "stylelint-config-standard": "^36.0.0"
   },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
