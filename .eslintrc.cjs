@@ -15,6 +15,12 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'prettier/prettier': [
+      'warn',
+      {
+          endOfLine: 'auto',
+      },
+    ],
     "eqeqeq": "error", // 항상 일치 연산자(=== 및 !==) 사용을 강제
     "curly": "error", // 제어문에서 항상 중괄호 사용을 강제
     "quotes": ["error", "double"], // 문자열은 항상 이중 따옴표로 설정
