@@ -1,7 +1,7 @@
 const colors = {
   Primary_Black: "#000000",
   Primary_orange: "#EB7D2D",
-  Secondary_ornage: "#FF7D1E",
+  Secondary_orange: "#FF7D1E",
   Tertiary_red: "#ED334B",
 
   Sub_pink: "#E92F75",
