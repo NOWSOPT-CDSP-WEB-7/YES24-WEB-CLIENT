@@ -1954,11 +1954,6 @@ strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-styled-reset@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.5.2.tgz#2eba489fce52e34368693adb8d5fb4bf775edc3c"
-  integrity sha512-dbAaaVEhweBs2FGfqGBdW6oMcMK8238C2X5KCxBhUQJX92m/QyUfzRADOXhdXiXNkIPELtMCd72YY9eCdORfIw==
-
 styled-components@^6.1.11:
   version "6.1.11"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-6.1.11.tgz#01948e5195bf1d39e57e0a85b41958c80e40cfb8"
@@ -1973,6 +1968,11 @@ styled-components@^6.1.11:
     shallowequal "1.1.0"
     stylis "4.3.2"
     tslib "2.6.2"
+
+styled-reset@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.5.2.tgz#2eba489fce52e34368693adb8d5fb4bf775edc3c"
+  integrity sha512-dbAaaVEhweBs2FGfqGBdW6oMcMK8238C2X5KCxBhUQJX92m/QyUfzRADOXhdXiXNkIPELtMCd72YY9eCdORfIw==
 
 stylelint-config-clean-order@^5.4.2:
   version "5.4.2"
@@ -2070,14 +2070,6 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-synckit@^0.8.6:
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/synckit/-/synckit-0.8.8.tgz#fe7fe446518e3d3d49f5e429f443cf08b6edfcd7"
-  integrity sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==
-  dependencies:
-    "@pkgr/core" "^0.1.0"
-    tslib "^2.6.2"
-
 supports-hyperlinks@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/supports-hyperlinks/-/supports-hyperlinks-3.0.0.tgz#c711352a5c89070779b4dad54c05a2f14b15c94b"
@@ -2090,6 +2082,14 @@ svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==
+
+synckit@^0.8.6:
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/synckit/-/synckit-0.8.8.tgz#fe7fe446518e3d3d49f5e429f443cf08b6edfcd7"
+  integrity sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==
+  dependencies:
+    "@pkgr/core" "^0.1.0"
+    tslib "^2.6.2"
 
 table@^6.8.2:
   version "6.8.2"
@@ -2124,7 +2124,7 @@ ts-api-utils@^1.3.0:
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-1.3.0.tgz#4b490e27129f1e8e686b45cc4ab63714dc60eea1"
   integrity sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==
 
-tslib@^2.6.2:
+tslib@2.6.2, tslib@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
