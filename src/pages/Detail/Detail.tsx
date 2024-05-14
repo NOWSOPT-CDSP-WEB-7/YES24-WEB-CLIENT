@@ -1,4 +1,5 @@
 import { SHOW_DETAIL } from "../../constants/showDetail";
+import { categories } from "../../constants/showDetailCategory";
 import * as S from "./Detail.styled";
 
 const Detail = () => {
@@ -14,11 +15,9 @@ const Detail = () => {
               <S.ShowImage src={image} />
               <S.ShowInfoContainer>
                 <S.CategoryBox>
-                  <S.Category>장르</S.Category>
-                  <S.Category>일시</S.Category>
-                  <S.Category>장소</S.Category>
-                  <S.Category>관람등급</S.Category>
-                  <S.Category>관람시간</S.Category>
+                  {categories.map((category) => (
+                    <S.Category>{category}</S.Category>
+                  ))}
                 </S.CategoryBox>
                 <S.InfoBox>
                   <S.Info>{genre}</S.Info>
