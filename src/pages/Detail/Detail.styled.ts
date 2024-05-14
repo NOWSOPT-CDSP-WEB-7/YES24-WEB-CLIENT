@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const DetailWrapper = styled.section``;
 
-export const ShowLayout = styled.section``;
+export const ShowLayout = styled.section`
+  padding: 1rem;
+`;
 
 export const Title = styled.h1`
-  padding: 1rem;
+  padding: 0 1rem;
   ${({ theme }) => theme.fonts.title_18pt_Bold};
 `;
 
