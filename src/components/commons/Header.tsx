@@ -8,7 +8,9 @@ import * as S from "./Header.styled.ts";
 const Header = () => {
   return (
     <S.HeaderWrapper>
-      <IcLogo />
+      <S.Logo>
+        <IcLogo />
+      </S.Logo>
       <S.BtnLayout>
         <S.SearchBtn type="button">
           <IcSearch />

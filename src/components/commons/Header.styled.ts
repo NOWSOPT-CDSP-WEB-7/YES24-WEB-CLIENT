@@ -5,6 +5,12 @@ export const HeaderWrapper = styled.header`
   padding: 0.5rem 1rem;
 
   background-color: ${({ theme }) => theme.colors.UI_background};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.UI_03};
+`;
+
+export const Logo = styled.p`
+  display: flex;
+  align-items: center;
 `;
 
 export const BtnLayout = styled.section`
@@ -16,6 +22,12 @@ export const SearchBtn = styled.button`
   display: flex;
 `;
 
-export const MyBtn = styled.button``;
+export const MyBtn = styled.button`
+  display: flex;
+  align-items: center;
+`;
 
-export const HamburgerBtn = styled.button``;
+export const HamburgerBtn = styled.button`
+  display: flex;
+  align-items: center;
+`;
