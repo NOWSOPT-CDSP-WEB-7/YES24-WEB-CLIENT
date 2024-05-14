@@ -1,18 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import { IcHamburger, IcLogo, IcMy, IcSearch } from "../../assets/icons";
 import * as S from "./Header.styled.ts";
 
 interface HeaderPropTypes {
-  handleNavigate: () => void;
+  navigateSearch: () => void;
 }
 
-const Header = (handleNavigate: HeaderPropTypes) => {
+const Header = ({ navigateSearch }: HeaderPropTypes) => {
+  const navigate = useNavigate();
+
+  const handleNavigateMain = () => {
+    navigate("/");
+  };
+
   return (
     <S.HeaderWrapper>
-      <S.Logo>
+      <S.Logo onClick={handleNavigateMain}>
         <IcLogo />
       </S.Logo>
       <S.BtnLayout>
-        <S.SearchBtn type="button" onClick={() => handleNavigate}>
+        <S.SearchBtn onClick={navigateSearch} type="button">
           <IcSearch />
         </S.SearchBtn>
         <S.MyBtn>
