@@ -20,13 +20,13 @@ const Footer = () => {
         <IcLine />
         <S.Rule>{FOOTER.rule}</S.Rule>
       </S.PrivacyNoticeLayout>
-      <S.AddressBox>
+      <S.AddressLayout>
         <S.Address>{FOOTER.address}</S.Address>
-      </S.AddressBox>
-      <S.BtnBox>
+      </S.AddressLayout>
+      <S.BtnLayout>
         <IcGlobalBtn />
         <IcYes24Btn />
-      </S.BtnBox>
+      </S.BtnLayout>
     </S.FooterWrapper>
   );
 };
