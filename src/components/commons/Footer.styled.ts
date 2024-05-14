@@ -59,7 +59,7 @@ export const Rule = styled.p`
   ${({ theme }) => theme.fonts.sub_12pt};
 `;
 
-export const AddressBox = styled.div`
+export const AddressLayout = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,7 @@ export const Address = styled.div`
   ${({ theme }) => theme.fonts.sub_10pt};
 `;
 
-export const BtnBox = styled.div`
+export const BtnLayout = styled.section`
   display: flex;
   gap: 0.5rem;
   align-items: center;
