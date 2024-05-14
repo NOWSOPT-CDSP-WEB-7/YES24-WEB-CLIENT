@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.header`
   padding: 0.5rem 1rem;
 
   background-color: ${({ theme }) => theme.colors.UI_background};
+  cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.UI_03};
 `;
 
