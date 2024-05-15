@@ -1,15 +1,24 @@
 .swiper {
+  display: flex;
   width: 37.5rem;
   height: 38.3rem;
   padding: 1rem;
+  padding-left: 0rem; 
+
+  align-items: flex-start;
+  gap: 1rem;
+  
 }
+
+
+
+/* 나중에 활용할 수도 있기에, 지우진 않았습니다. 
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,3 +30,4 @@
   height: 100%;
   object-fit: cover;
 }
+/*
