@@ -3,7 +3,7 @@ import { IcHamburger, IcLogo, IcMy, IcSearch } from "../../assets/icons";
 import * as S from "./Header.styled.ts";
 
 interface HeaderPropTypes {
-  navigateSearch: () => void;
+  navigateSearch?: () => void;
 }
 
 const Header = ({ navigateSearch }: HeaderPropTypes) => {
