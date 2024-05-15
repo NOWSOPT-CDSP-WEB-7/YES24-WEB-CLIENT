@@ -50,53 +50,52 @@ const MainCarousel = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide Change")}
       >
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[0].image}>
-            <ContentBox>
-              <TextBox>
-                <TitleAndSubTitle>
-                  <Title>
-                    <Only>단독</Only>
-                    <div>{MAIN_RESPONSE.data[0].title}</div>
-                  </Title>
-                  <SubTitle>
-                    <div>{MAIN_RESPONSE.data[0].subTitle}</div>
-                  </SubTitle>
-                </TitleAndSubTitle>
-
-                <PeriodAndPlace>
-                  {formatDatePlace(MAIN_RESPONSE.data[0].period, MAIN_RESPONSE.data[0].place)}
-                </PeriodAndPlace>
-              </TextBox>
-              <Indicator>
-                <NowId>
-                  1<AllId>/12</AllId>
-                </NowId>
-              </Indicator>
-            </ContentBox>
-          </SwiperCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[1].image}></SwiperCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[2].image}></SwiperCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[3].image}></SwiperCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[4].image}></SwiperCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SwiperCard imgsrc={MAIN_RESPONSE.data[5].image}></SwiperCard>
-        </SwiperSlide>
+        {MAIN_RESPONSE.data.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <SwiperCard
+              imgsrc={item.image}
+              title={item.title}
+              subTitle={item.subTitle}
+              id={item.id}
+              period={item.period}
+              place={item.place}
+            >
+              <ContentBox>
+                <TextBox>
+                  <TitleAndSubTitle>
+                    <Title>
+                      <Only>단독</Only>
+                      <div>{item.title}</div>
+                    </Title>
+                    <SubTitle>
+                      <div>{item.subTitle}</div>
+                    </SubTitle>
+                  </TitleAndSubTitle>
+                  <PeriodAndPlace>{formatDatePlace(item.period, item.place)}</PeriodAndPlace>
+                </TextBox>
+                <Indicator>
+                  <NowId>
+                    {index + 1}
+                    <AllId>/12</AllId>
+                  </NowId>
+                </Indicator>
+              </ContentBox>
+            </SwiperCard>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
 };
 
-const SwiperCard = styled.div<{ imgsrc: string }>`
+const SwiperCard = styled.div<{
+  imgsrc: string;
+  title: string;
+  subTitle: string;
+  period: string;
+  place: string;
+  id: number;
+}>`
   background-color: green;
   width: 34rem;
   height: 100%;
