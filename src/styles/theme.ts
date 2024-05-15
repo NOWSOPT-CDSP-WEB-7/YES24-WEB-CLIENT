@@ -62,6 +62,12 @@ const fonts = {
     fontSize: "1.2rem",
     lineHeight: "1.56rem",
   },
+  sub_12pt_bold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.2rem",
+    lineHeight: "1.44rem",
+  },
   sub_14pt: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 400,
