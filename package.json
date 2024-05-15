@@ -7,15 +7,16 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "svgr": "npx @svgr/cli -d src/assets/svg --ignore-existing --typescript --no-dimensions public/svg"
   },
   "dependencies": {
     "postcss": "^8.4.38",
     "postcss-styled-syntax": "^0.6.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-reset": "^4.5.2",
     "styled-components": "^6.1.11",
+    "styled-reset": "^4.5.2",
     "stylelint-config-standard": "^36.0.0"
   },
   "devDependencies": {
@@ -30,12 +31,13 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "prettier": "^3.2.5",
     "postcss-syntax": "^0.36.2",
+    "prettier": "^3.2.5",
     "stylelint": "^16.5.0",
     "stylelint-config-clean-order": "^5.4.2",
     "stylelint-config-styled-components": "^0.1.1",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }
