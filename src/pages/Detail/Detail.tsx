@@ -1,6 +1,7 @@
 import { IcBtnShare, IcHeartFill } from "../../assets/icons";
 import Header from "../../components/commons/Header/Header";
-import { SHOW_DETAIL } from "../../constants/showDetail";
+import { SHOW_DETAIL } from "../../constants/showData";
+
 import { categories } from "../../constants/showDetailCategory";
 import * as S from "./Detail.styled";
 
@@ -9,7 +10,7 @@ const Detail = () => {
     <>
       <Header />
       {SHOW_DETAIL.data.map(
-        ({ runShowID, genre, title, period, filmRating, location, place, image, runTime }) => (
+        ({ runShowID, genre, title, period, filmRating, location, place, image, runtime }) => (
           <S.ShowLayout key={runShowID}>
             <S.Title>
               [{location}] {title}
@@ -28,7 +29,7 @@ const Detail = () => {
                     <S.Info>{period}</S.Info>
                     <S.Place>{place}</S.Place>
                     <S.Info>{filmRating}세 이상 관람가</S.Info>
-                    <S.Info>{runTime}분 (인터미션: 20분 포함)</S.Info>
+                    <S.Info>{runtime}분 (인터미션: 20분 포함)</S.Info>
                   </S.InfoBox>
                 </S.ShowInfoContainer>
                 <S.BtnLayout>
