@@ -26,6 +26,12 @@ const fonts = {
     fontSize: "1.4rem",
     lineHeight: "2.1rem",
   },
+  title_18pt: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.8rem",
+    lineHeight: "2.34rem",
+  },
   title_18pt_Bold: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 800,
