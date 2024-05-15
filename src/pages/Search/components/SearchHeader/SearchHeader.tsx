@@ -1,4 +1,4 @@
-import { IcBackBtn, IcHamburger } from "../../assets/icons";
+import { IcBackBtn, IcHamburger } from "../../../../assets/icons";
 import * as S from "./SearchHeader.styled.ts";
 import { useNavigate } from "react-router-dom";
 
