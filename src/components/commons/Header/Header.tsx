@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { IcHamburger, IcLogo, IcMy, IcSearch } from "../../assets/icons";
+import { IcHamburger, IcLogo, IcMy, IcSearch } from "../../../assets/icons/index.ts";
 import * as S from "./Header.styled.ts";
 
 interface HeaderPropTypes {
