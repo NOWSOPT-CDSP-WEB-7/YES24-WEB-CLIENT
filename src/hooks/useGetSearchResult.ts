@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-interface searchResultPropTypes {
-  id: number;
+interface extractedDataPropTypes {
   title: string;
-  period: string;
   location: string;
+}
+interface searchResultPropTypes extends extractedDataPropTypes {
+  id: number;
+  period: string;
   place: string;
   genre: string;
   image: string;
@@ -13,6 +15,7 @@ interface searchResultPropTypes {
 
 const useGetSearchResult = () => {
   const [searchResult, setSearchResult] = useState<searchResultPropTypes[]>([]);
+  const [extractedData, setExtractedData] = useState<extractedDataPropTypes[]>([]);
 
   const getSearchResult = async () => {
     try {
@@ -28,13 +31,14 @@ const useGetSearchResult = () => {
   };
 
   useEffect(() => {
-    const extractedData = searchResult.map((item) => ({
+    const data = searchResult.map((item) => ({
       title: item.title,
       location: item.location,
     }));
+    setExtractedData(data);
   }, [searchResult]);
 
-  return { searchResult, getSearchResult };
+  return { searchResult, extractedData, getSearchResult };
 };
 
 export default useGetSearchResult;
