@@ -31,5 +31,5 @@ export const SearchText = styled.h1`
   align-items: center;
 
   color: ${({ theme }) => theme.colors.Text_strong};
-  ${({ theme }) => theme.fonts.title_18pt_Bold};
+  ${({ theme }) => theme.fonts.title_18pt};
 `;
