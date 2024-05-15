@@ -5,6 +5,9 @@ const useChangeInput = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
+
+  
+
   return { input, handleInputChange };
 };
 
