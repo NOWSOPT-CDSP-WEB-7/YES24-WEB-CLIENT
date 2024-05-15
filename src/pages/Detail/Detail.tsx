@@ -1,6 +1,6 @@
 import { IcBtnShare, IcHeartFill } from "../../assets/icons";
 import Header from "../../components/commons/Header/Header";
-import { SHOW_DETAIL } from "../../constants/showData";
+import { SHOW_DETAIL } from "../../constants/\bshowDetailData";
 
 import { categories } from "../../constants/showDetailCategory";
 import * as S from "./Detail.styled";
