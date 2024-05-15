@@ -12,9 +12,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import styled from "styled-components";
 import "./swiperStyles.css";
 import { IcOnlyBox } from "@assets/icons";
+import * as S from "./MainCarousel.styled";
 
 const MainCarousel = () => {
   const formatDatePlace = (date: string, place: string): string => {
@@ -46,145 +46,38 @@ const MainCarousel = () => {
         centeredSlides={false}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide Change")}
       >
         {MAIN_RESPONSE.data.map((item, index) => (
           <SwiperSlide key={item.id}>
-            <SwiperCard imgsrc={item.image}>
-              <GradationBox>
-                <ContentBox>
-                  <TextBox>
-                    <TitleAndSubTitle>
-                      <Title>
+            <S.SwiperCard imgsrc={item.image}>
+              <S.GradationBox>
+                <S.ContentBox>
+                  <S.TextBox>
+                    <S.TitleAndSubTitle>
+                      <S.Title>
                         <IcOnlyBox />
                         <div>{item.title}</div>
-                      </Title>
-                      <SubTitle>
+                      </S.Title>
+                      <S.SubTitle>
                         <div>{item.subTitle}</div>
-                      </SubTitle>
-                    </TitleAndSubTitle>
-                    <PeriodAndPlace>{formatDatePlace(item.period, item.place)}</PeriodAndPlace>
-                  </TextBox>
-                  <Indicator>
-                    <NowId>
+                      </S.SubTitle>
+                    </S.TitleAndSubTitle>
+                    <S.PeriodAndPlace>{formatDatePlace(item.period, item.place)}</S.PeriodAndPlace>
+                  </S.TextBox>
+                  <S.Indicator>
+                    <S.NowId>
                       {index + 1}
-                      <AllId>/12</AllId>
-                    </NowId>
-                  </Indicator>
-                </ContentBox>
-              </GradationBox>
-            </SwiperCard>
+                      <S.AllId>/12</S.AllId>
+                    </S.NowId>
+                  </S.Indicator>
+                </S.ContentBox>
+              </S.GradationBox>
+            </S.SwiperCard>
           </SwiperSlide>
         ))}
       </Swiper>
     </>
   );
 };
-
-const SwiperCard = styled.div<{ imgsrc: string }>`
-  width: 34rem;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-shrink: 0;
-
-  border-radius: 0.5rem;
-  background-image: url(${(props) => props.imgsrc});
-`;
-
-const GradationBox = styled.div`
-  width: 34rem;
-  height: 24rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-shrink: 0;
-
-  background: var(
-    --black_gra,
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.49) 57.38%,
-      rgba(0, 0, 0, 0.7) 100%
-    )
-  );
-`;
-
-const ContentBox = styled.div`
-  display: flex;
-  width: 34rem;
-  padding: 2rem;
-  flex-direction: column;
-
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 1rem;
-`;
-
-const TextBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  align-self: stretch;
-`;
-
-const TitleAndSubTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  align-self: stretch;
-`;
-
-const Title = styled.div`
-  display: flex;
-  width: 30rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-
-  color: var(--UI-UI_background, #fff);
-  ${({ theme }) => theme.fonts.title_26pt_Bold};
-`;
-
-const SubTitle = styled.span`
-  display: flex; //text가 아니라 div로 주었으므로 불가피하게 설정
-  justify-content: flex-start;
-
-  width: 30.5rem;
-  color: var(--UI-UI_background, #fff);
-
-  ${({ theme }) => theme.fonts.title_14pt_Bold};
-`;
-
-const PeriodAndPlace = styled.span`
-  color: var(--UI-UI_background, #fff);
-  ${({ theme }) => theme.fonts.sub_14pt};
-`;
-
-const Indicator = styled.div`
-  display: flex;
-  padding: 0.4rem 1rem;
-  align-items: flex-start;
-  gap: 0.1rem;
-  border-radius: 2rem;
-  background: var(--black_gra, rgba(0, 0, 0, 0.4));
-`;
-
-const NowId = styled.span`
-  color: var(--UI-UI_background, #fff);
-  ${({ theme }) => theme.fonts.sub_14pt};
-`;
-
-const AllId = styled.span`
-  opacity: 0.4;
-`;
 
 export default MainCarousel;
