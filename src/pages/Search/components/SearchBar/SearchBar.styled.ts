@@ -26,6 +26,11 @@ export const SearchBarInput = styled.input`
     ${({ theme }) => theme.colors.Text_02};
   }
 `;
+export const CancelBtn = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+`;
 export const SearchBtn = styled.button`
   display: flex;
   align-items: center;
