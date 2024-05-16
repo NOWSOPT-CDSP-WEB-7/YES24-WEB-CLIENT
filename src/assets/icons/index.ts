@@ -1,4 +1,5 @@
 export { default as IcChevronUp } from "./ic_chevron_up.svg?react";
+export { default as IcDownload } from "./ic_download.svg?react";
 export { default as IcGlobalBtn } from "./ic_globalBtn.svg?react";
 export { default as IcHamburger } from "./ic_hamburger.svg?react";
 export { default as IcLine } from "./ic_line.svg?react";
