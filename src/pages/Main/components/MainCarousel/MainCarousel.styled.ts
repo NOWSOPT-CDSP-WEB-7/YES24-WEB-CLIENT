@@ -90,11 +90,11 @@ export const Indicator = styled.div`
   border-radius: 2rem;
 `;
 
-export const NowId = styled.span`
+export const CurrentIndex = styled.span`
   color: ${({ theme }) => theme.colors.UI_background};
   ${({ theme }) => theme.fonts.sub_14pt};
 `;
 
-export const AllId = styled.span`
+export const TotalIndex = styled.span`
   opacity: 0.4;
 `;

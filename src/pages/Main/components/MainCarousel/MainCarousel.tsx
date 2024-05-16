@@ -65,10 +65,10 @@ const MainCarousel = () => {
                     <S.PeriodAndPlace>{formatDatePlace(item.period, item.place)}</S.PeriodAndPlace>
                   </S.TextBox>
                   <S.Indicator>
-                    <S.NowId>
+                    <S.CurrentIndex>
                       {index + 1}
-                      <S.AllId>/12</S.AllId>
-                    </S.NowId>
+                      <S.TotalIndex>/12</S.TotalIndex>
+                    </S.CurrentIndex>
                   </S.Indicator>
                 </S.ContentBox>
               </S.GradationBox>
