@@ -1,5 +1,6 @@
-import Header from "../../components/commons/Header/Header";
 
+import SaleCoupon from "./components/SaleCoupon";
+import Header from "../../components/commons/Header/Header";
 import ShowInfo from "./components/ShowInfo";
 
 const Detail = () => {
@@ -7,6 +8,7 @@ const Detail = () => {
     <>
       <Header />
       <ShowInfo />
+      <SaleCoupon />
     </>
   );
 };
