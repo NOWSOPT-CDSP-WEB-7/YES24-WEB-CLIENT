@@ -6,7 +6,7 @@ import no5 from "@assets/mainCarouselImgs/이찬원콘서트.png";
 import no6 from "@assets/mainCarouselImgs/paganini.png";
 //웹팩이 인식할 수 있도록 일일히 설정해줌 - 추후 API로 받아오면 위의 과정 불필요.
 
-interface RESPONSE_OBJ_TYPE {
+interface ResponseObjType {
   id: number;
   title: string;
   subTitle: string;
@@ -15,11 +15,11 @@ interface RESPONSE_OBJ_TYPE {
   place: string;
 }
 
-interface RESPONSE_TYPE {
-  data: RESPONSE_OBJ_TYPE[];
+interface ResponseType {
+  data: ResponseObjType[];
 }
 
-export const MAIN_RESPONSE: RESPONSE_TYPE = {
+export const MAIN_RESPONSE: ResponseType = {
   data: [
     {
       id: 1,

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Main = () => {
   const navigate = useNavigate();
   const navigateSearch = () => {
-    navigate("/");
+    navigate("/search");
   };
   return (
     <>
