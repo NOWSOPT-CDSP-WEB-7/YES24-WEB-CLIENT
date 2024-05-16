@@ -6,32 +6,40 @@ const GlobalStyles = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
     *{
         box-sizing: border-box;
     }
+
     html, body{
-        overflow-x :  hidden;
         width: 37.5rem;
+        overflow-x :  hidden;
     }
+
     #root, body, html {
     margin: 0 auto;
     padding:0;
+
     font-size: 62.5%;
 }
+
     body{
         line-height: 1;
     }
+
     ol, ul{
         list-style: none;
     }
+
     button {
-        border: 0;
         background: transparent;
         cursor: pointer;
+        border: 0;
     }
+
     input {
-        border: none;
         outline: none;
+        border: none;
     }
 `;
 
