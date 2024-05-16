@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CouponWrapper = styled.section`
   display: flex;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
 `;
 
 export const CouponLayout = styled.section`
