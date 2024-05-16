@@ -15,7 +15,7 @@ export const CouponLayout = styled.section`
   border-radius: 2px;
 `;
 
-export const AvailableCouponTxt = styled.span`
+export const ValidCouponTxt = styled.span`
   ${({ theme }) => theme.fonts.title_14pt_Bold};
 `;
 

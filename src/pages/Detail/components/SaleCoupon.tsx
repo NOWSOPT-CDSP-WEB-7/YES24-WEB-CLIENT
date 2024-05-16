@@ -5,10 +5,10 @@ const SaleCoupon = () => {
   return (
     <S.CouponWrapper>
       <S.CouponLayout>
-        <S.AvailableCouponTxt>
+        <S.ValidCouponTxt>
           사용가능한 할인쿠폰
           <S.AvailableCoupon> 2</S.AvailableCoupon>개
-        </S.AvailableCouponTxt>
+        </S.ValidCouponTxt>
         <S.DownloadBtn>
           다운
           <IcDownload />
