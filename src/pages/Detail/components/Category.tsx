@@ -10,7 +10,6 @@ const Category = () => {
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
-    return category;
   };
 
   return (
