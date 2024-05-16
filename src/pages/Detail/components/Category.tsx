@@ -2,11 +2,12 @@ import { useState } from "react";
 import * as S from "./Category.styled";
 import ExpectComment from "./ExpectComment";
 import ProductInfo from "./ProductInfo";
-import ShowInfo from "./ShowInfo";
+
+import Info from "./Info";
 import ShowPoster from "./ShowPoster";
 
 const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState("showInfo");
+  const [selectedCategory, setSelectedCategory] = useState("Info");
 
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
@@ -16,8 +17,8 @@ const Category = () => {
     <>
       <S.CategoryWrapper>
         <S.Category
-          $isSelected={selectedCategory === "showInfo"}
-          onClick={() => handleCategoryClick("showInfo")}
+          $isSelected={selectedCategory === "Info"}
+          onClick={() => handleCategoryClick("Info")}
         >
           공연정보
         </S.Category>
@@ -40,8 +41,8 @@ const Category = () => {
           상품정보
         </S.Category>
       </S.CategoryWrapper>
-      {selectedCategory === "showInfo" ? (
-        <ShowInfo />
+      {selectedCategory === "Info" ? (
+        <Info />
       ) : selectedCategory === "expectComment" ? (
         <ExpectComment />
       ) : selectedCategory === "showPoster" ? (
