@@ -1,7 +1,7 @@
 import useGetSearchResult from "../../../../hooks/useGetSearchResult.ts";
 import * as S from "./SearchList.styled.ts";
 
-const SearchList = ({ input }: string) => {
+const SearchList = ({ input }) => {
   const { searchResult } = useGetSearchResult();
   const filteredResult = searchResult.filter(
     (item) =>
