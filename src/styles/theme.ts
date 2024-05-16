@@ -17,6 +17,8 @@ const colors = {
   UI_02: "#E4E4E4",
   UI_03: "#EEF1F1",
   UI_background: "#FFFFFF",
+
+  Gray_stroke: "#CFCFCF",
 };
 
 const fonts = {
@@ -65,6 +67,12 @@ const fonts = {
   sub_12pt_bold: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 700,
+    fontSize: "1.2rem",
+    lineHeight: "1.44rem",
+  },
+  sub_12pt_extraBold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 900,
     fontSize: "1.2rem",
     lineHeight: "1.44rem",
   },
