@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Detail from "./pages/Detail/Detail";
 
 const Router = () => {
   return (
@@ -7,7 +8,7 @@ const Router = () => {
         <Route path="/" />
         <Route path="/search" />
         <Route path="/search/list" />
-        <Route path="/detail" />
+        <Route path="/detail" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );
