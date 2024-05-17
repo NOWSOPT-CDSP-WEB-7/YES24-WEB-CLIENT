@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./swiperStyles.css";
+import { IcChevronrRight } from "@assets/icons";
 
 import { RANKING_RESPONSE } from "@constants/rankingCarousel";
 
@@ -84,6 +85,10 @@ const RankingComponent = () => {
           <SwiperSlide></SwiperSlide>
         </Swiper>
       </S.ContentWrapper>
+      <S.BottomButton>
+        랭킹 더보기
+        <IcChevronrRight />
+      </S.BottomButton>
     </S.RankingWrapper>
   );
 };

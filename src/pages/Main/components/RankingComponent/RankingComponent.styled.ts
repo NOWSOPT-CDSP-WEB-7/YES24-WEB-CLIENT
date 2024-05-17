@@ -125,3 +125,18 @@ export const SwiperCardInfo = styled.div`
   color: ${({ theme }) => theme.colors.Text_02};
   ${({ theme }) => theme.fonts.sub_12pt};
 `;
+
+export const BottomButton = styled.button`
+  display: flex;
+  width: 35.5rem;
+  padding: 1rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.2rem;
+  border: 0.1rem solid ${({ theme }) => theme.colors.UI_02};
+  background: ${({ theme }) => theme.colors.UI_background};
+
+  color: ${({ theme }) => theme.colors.Text_01};
+  ${({ theme }) => theme.fonts.title_14pt_Bold};
+`;

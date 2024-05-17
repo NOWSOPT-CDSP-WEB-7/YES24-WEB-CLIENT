@@ -7,3 +7,4 @@ export { default as IcMy } from "./ic_my.svg?react";
 export { default as IcSearch } from "./ic_search.svg?react";
 export { default as IcYes24Btn } from "./ic_yes24Btn.svg?react";
 export { default as IcOnlyBox } from "./ic_only_box.svg?react";
+export { default as IcChevronrRight } from "./ic_chevron-right.svg?react";
