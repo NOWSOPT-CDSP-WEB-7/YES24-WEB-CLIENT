@@ -35,7 +35,7 @@ export const ContentTab = styled.div`
   border-bottom: 0.2rem solid ${({ theme }) => theme.colors.UI_03};
 `;
 
-export const TabUnit = styled.div<{ $isSelected?: boolean }>`
+export const TabUnit = styled.button<{ $isSelected?: boolean }>`
   display: flex;
   padding: 0.8rem;
   justify-content: center;
