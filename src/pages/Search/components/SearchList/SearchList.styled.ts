@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const SearchListWrapper = styled.section`
   display: flex;
@@ -21,12 +21,14 @@ export const LiTextBox = styled.div`
   align-items: center;
   margin-left: 1rem;
 `;
-export const LiLocation = styled.span`
-  color: ${({ theme }) => theme.colors.Text_01};
+export const LiLocation = styled.span<{ $isMatched: boolean }>`
+  color: ${({ $isMatched, theme }) =>
+    $isMatched ? theme.colors.Secondary_orange : theme.colors.Text_01};
   ${({ theme }) => theme.fonts.sub_14pt};
   white-space: pre;
 `;
-export const LiTitle = styled.span`
-  color: ${({ theme }) => theme.colors.Text_01};
+export const LiTitle = styled.span<{ $isMatched: boolean }>`
+  color: ${({ $isMatched, theme }) =>
+    $isMatched ? theme.colors.Secondary_orange : theme.colors.Text_01};
   ${({ theme }) => theme.fonts.sub_14pt};
 `;
