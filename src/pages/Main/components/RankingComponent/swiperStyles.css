@@ -1,0 +1,7 @@
+.swiper {
+  display: flex;
+  width: 37.5rem;
+  padding: 0rem 1rem;
+  align-items: flex-start;
+  gap: 1rem;
+}

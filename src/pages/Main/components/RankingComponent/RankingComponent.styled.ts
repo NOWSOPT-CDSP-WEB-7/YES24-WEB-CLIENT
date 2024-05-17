@@ -51,3 +51,77 @@ export const TabUnit = styled.div<{ $isSelected?: boolean }>`
   color: ${({ theme, $isSelected }) =>
     $isSelected ? theme.colors.Primary_Black : theme.colors.Text_02};
 `;
+
+export const SwiperCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+`;
+
+export const SwiperCardImg = styled.div<{ imgsrc: string }>`
+  display: flex;
+  width: 15rem;
+  height: 19rem;
+  padding-top: 9.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  border-radius: 0.4rem;
+  background-image: url(${({ imgsrc }) => imgsrc});
+`;
+
+export const SwiperCardImgGradation = styled.div`
+  display: flex;
+  width: 15rem;
+  height: 9.5rem;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  align-items: flex-end;
+  gap: 0.8rem;
+  background: var(
+    --black_gra,
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.49) 57.38%,
+      rgba(0, 0, 0, 0.7) 100%
+    )
+  );
+
+  color: ${({ theme }) => theme.colors.UI_background};
+  ${({ theme }) => theme.fonts.title_26pt_Bold};
+`;
+
+export const SwiperCardContents = styled.div`
+  display: flex;
+  height: 6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+`;
+
+export const SwiperCardTitle = styled.span`
+  align-self: stretch;
+  color: ${({ theme }) => theme.colors.Text_strong};
+
+  /*이거 디자인 선생님이 정의해두지 않은 스타일이라 직접 작성 */
+  /*디자인 선생님한테 연락해서 추가 요청 드리기! */
+  font-family: "Apple SD Gothic Neo";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 16.8px */
+`;
+
+export const SwiperCardInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+
+  color: ${({ theme }) => theme.colors.Text_02};
+  ${({ theme }) => theme.fonts.sub_12pt};
+`;

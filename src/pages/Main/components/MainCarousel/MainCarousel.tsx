@@ -45,7 +45,7 @@ const MainCarousel = () => {
         slidesPerView={1.04}
         centeredSlides={false}
         loop={true}
-        autoplay={{ delay: 300000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
       >
         {MAIN_RESPONSE.data.map((item, index) => (
           <SwiperSlide key={item.id}>
