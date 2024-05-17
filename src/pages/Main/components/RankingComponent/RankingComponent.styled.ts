@@ -114,6 +114,11 @@ export const SwiperCardTitle = styled.span`
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 16.8px */
+
+  /*위치 조정의 편의를 위해, 한줄 넘어갈 경우 ... 처리 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const SwiperCardInfo = styled.div`
