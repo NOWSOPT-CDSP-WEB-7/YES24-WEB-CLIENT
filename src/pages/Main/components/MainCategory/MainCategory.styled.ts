@@ -19,7 +19,7 @@ export const CategoryCell = styled.div`
   color: ${({ theme }) => theme.colors.Text_01};
 
   background: var(--UI-UI_background, #fff);
-  border: 1px solid var(--UI-UI_01, #f8f8f8);
+  border: 1px solid ${({ theme }) => theme.colors.UI_01};
 
   ${({ theme }) => theme.fonts.title_14pt_Bold};
 `;
