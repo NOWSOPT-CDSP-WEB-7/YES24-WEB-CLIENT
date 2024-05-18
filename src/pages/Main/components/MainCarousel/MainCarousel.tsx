@@ -9,33 +9,15 @@ import { MAIN_RESPONSE } from "@constants/mainCarousel";
 //import "swiper/css/bundle";
 
 import { IcOnlyBox } from "@assets/icons";
+import { formatData } from "@utils/formatData";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./MainCarousel.styled";
 import "./swiperStyles.css";
-
 const MainCarousel = () => {
-  const formatDatePlace = (date: string, place: string): string => {
-    //시작 날짜를 3부분으로 분할
-    const yearStart = date.slice(0, 4);
-    const monthStart = date.slice(4, 6);
-    const dayStart = date.slice(6, 8);
-    //마감 날짜를 3부분으로 분할
-    const yearEnd = date.slice(8, 12);
-    const monthEnd = date.slice(12, 14);
-    const dayEnd = date.slice(14, 16);
-
-    let formattedDate;
-    if (yearStart === yearEnd) {
-      formattedDate = `${yearStart}.${monthStart}.${dayStart} ~ ${monthEnd}.${dayEnd}`;
-    } else {
-      formattedDate = `${yearStart}.${monthStart}.${dayStart} ~ ${yearEnd}.${monthEnd}.${dayEnd}`;
-    }
-    const resultDate = `${formattedDate}, ${place}`;
-    return resultDate;
-  };
+  //useFormatData 사용해야함
 
   return (
     <>
@@ -63,7 +45,7 @@ const MainCarousel = () => {
                         <div>{item.subTitle}</div>
                       </S.SubTitle>
                     </S.TitleAndSubTitle>
-                    <S.PeriodAndPlace>{formatDatePlace(item.period, item.place)}</S.PeriodAndPlace>
+                    <S.PeriodAndPlace>{formatData(item.period, item.place)}</S.PeriodAndPlace>
                   </S.TextBox>
                   <S.Indicator>
                     <S.CurrentIndex>

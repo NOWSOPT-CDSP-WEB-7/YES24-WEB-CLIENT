@@ -1,4 +1,5 @@
 import { IcChevronrRight } from "@assets/icons";
+import { formatData } from "@utils/formatData";
 import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,20 +17,7 @@ const RankingComponent = () => {
     setSelectedTab(tab);
   };
 
-  const formatDate = (date: string): string => {
-    //시작 날짜를 3부분으로 분할
-    const yearStart = date.slice(0, 4);
-    const monthStart = date.slice(4, 6);
-    const dayStart = date.slice(6, 8);
-    //마감 날짜를 3부분으로 분할
-    const yearEnd = date.slice(8, 12);
-    const monthEnd = date.slice(12, 14);
-    const dayEnd = date.slice(14, 16);
-
-    const formattedDate = `${yearStart}.${monthStart}.${dayStart} ~ ${yearEnd}.${monthEnd}.${dayEnd}`;
-
-    return formattedDate;
-  };
+  //useFormatData 사용해야함
 
   useEffect(() => {
     //추후 이 부분에서 필터링 진행할 예정
@@ -76,7 +64,7 @@ const RankingComponent = () => {
                     <S.SwiperCardContents>
                       <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>
                       <S.SwiperCardInfo>
-                        <div>{formatDate(item.period)}</div>
+                        <div>{formatData(item.period)}</div>
                         <div>{item.place}</div>
                       </S.SwiperCardInfo>
                     </S.SwiperCardContents>
