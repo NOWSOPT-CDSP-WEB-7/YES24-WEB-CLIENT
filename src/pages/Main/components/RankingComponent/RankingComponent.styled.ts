@@ -104,18 +104,12 @@ export const SwiperCardTitle = styled.span`
   /* 위치 조정의 편의를 위해, 한줄 넘어갈 경우 ... 처리 */
   overflow: hidden;
 
-  color: ${({ theme }) => theme.colors.Text_strong};
-  font-weight: 800;
-  font-size: 1.4rem;
-
-  /* 이거 디자인 선생님이 정의해두지 않은 스타일이라 직접 작성 */
-
-  /* 디자인 선생님한테 연락해서 추가 요청 드리기! */
-  font-family: "Apple SD Gothic Neo";
-  font-style: normal;
-  line-height: 120%; /* 16.8px */
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: ${({ theme }) => theme.colors.Text_strong};
+
+  /* 디자인 선생님한테 연락해서 추가 요청 드리기! */
+  ${({ theme }) => theme.fonts.ranking_title_14pt};
 `;
 
 export const SwiperCardInfo = styled.div`
