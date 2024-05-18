@@ -65,23 +65,24 @@ const RankingComponent = () => {
           slidesOffsetAfter={-150}
           className={"rankingSwiper"}
         >
-          {RANKING_RESPONSE.data.map((item) =>
-            selectedTab === item.genre ? (
-              <SwiperSlide key={item.id}>
-                <S.SwiperCard>
-                  <S.SwiperCardImg imgsrc={item.image}>
-                    <S.SwiperCardImgGradation>{item.ranking}</S.SwiperCardImgGradation>
-                  </S.SwiperCardImg>
-                  <S.SwiperCardContents>
-                    <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>
-                    <S.SwiperCardInfo>
-                      <div>{formatDate(item.period)}</div>
-                      <div>{item.place}</div>
-                    </S.SwiperCardInfo>
-                  </S.SwiperCardContents>
-                </S.SwiperCard>
-              </SwiperSlide>
-            ) : null
+          {RANKING_RESPONSE.data.map(
+            (item) =>
+              selectedTab === item.genre && (
+                <SwiperSlide key={item.id}>
+                  <S.SwiperCard>
+                    <S.SwiperCardImg imgsrc={item.image}>
+                      <S.SwiperCardImgGradation>{item.ranking}</S.SwiperCardImgGradation>
+                    </S.SwiperCardImg>
+                    <S.SwiperCardContents>
+                      <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>
+                      <S.SwiperCardInfo>
+                        <div>{formatDate(item.period)}</div>
+                        <div>{item.place}</div>
+                      </S.SwiperCardInfo>
+                    </S.SwiperCardContents>
+                  </S.SwiperCard>
+                </SwiperSlide>
+              )
           )}
           <SwiperSlide></SwiperSlide>
         </Swiper>
