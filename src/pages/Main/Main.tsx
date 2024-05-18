@@ -3,6 +3,7 @@ import MainCarousel from "./components/MainCarousel/MainCarousel";
 import Footer from "../../components/commons/Footer/Footer";
 import MainCategory from "./components/MainCategory/MainCategory";
 import { useNavigate } from "react-router-dom";
+import RankingComponent from "./components/RankingComponent/RankingComponent";
 import { IcDevider10px } from "@assets/icons";
 
 const Main = () => {
@@ -16,6 +17,7 @@ const Main = () => {
       <MainCarousel />
       <MainCategory />
       <IcDevider10px />
+      <RankingComponent />
       <Footer />
     </>
   );

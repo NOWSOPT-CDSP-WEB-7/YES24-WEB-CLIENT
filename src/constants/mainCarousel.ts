@@ -1,12 +1,12 @@
+import no6 from "@assets/mainCarouselImgs/paganini.png";
 import no1 from "@assets/mainCarouselImgs/등등곡.png";
 import no2 from "@assets/mainCarouselImgs/디어에반핸슨.png";
 import no3 from "@assets/mainCarouselImgs/어쩌면해피엔딩.png";
 import no4 from "@assets/mainCarouselImgs/이블데드.png";
 import no5 from "@assets/mainCarouselImgs/이찬원콘서트.png";
-import no6 from "@assets/mainCarouselImgs/paganini.png";
 //웹팩이 인식할 수 있도록 일일히 설정해줌 - 추후 API로 받아오면 위의 과정 불필요.
 
-interface ResponseObjType {
+interface ResponseObjPropTypes {
   id: number;
   title: string;
   subTitle: string;
@@ -15,11 +15,11 @@ interface ResponseObjType {
   place: string;
 }
 
-interface ResponseType {
-  data: ResponseObjType[];
+interface ResponsePropTypes {
+  data: ResponseObjPropTypes[];
 }
 
-export const MAIN_RESPONSE: ResponseType = {
+export const MAIN_RESPONSE: ResponsePropTypes = {
   data: [
     {
       id: 1,

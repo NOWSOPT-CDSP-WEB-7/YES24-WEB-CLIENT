@@ -22,10 +22,7 @@ export const GradationBox = styled.div`
   width: 34rem;
   height: 24rem;
 
-  background: var(
-    --black_gra,
-    linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 57.38%, rgb(0 0 0 / 70%) 100%)
-  );
+  background: ${({ theme }) => theme.colors.Black_Gra};
   border-radius: 0.5rem;
 `;
 
@@ -87,7 +84,7 @@ export const Indicator = styled.div`
   align-items: flex-start;
   padding: 0.4rem 1rem;
 
-  background: var(--black_gra, rgb(0 0 0 / 40%));
+  background: rgb(0 0 0 / 40%);
   border-radius: 2rem;
 `;
 

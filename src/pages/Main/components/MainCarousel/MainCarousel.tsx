@@ -1,42 +1,14 @@
-//img src로 하면 인식을 못하는 경우가 있어서 다음과 같이 이용
-
 import { MAIN_RESPONSE } from "@constants/mainCarousel";
 
-//import Swiper from "swiper";
-//import "swiper/css";
-
-//import Swiper from "swiper/bundle";
-//import "swiper/css/bundle";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { IcOnlyBox } from "@assets/icons";
+import { formatData } from "@utils/formatData";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./swiperStyles.css";
-import { IcOnlyBox } from "@assets/icons";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./MainCarousel.styled";
-
+import "./swiperStyles.css";
 const MainCarousel = () => {
-  const formatDatePlace = (date: string, place: string): string => {
-    //시작 날짜를 3부분으로 분할
-    const yearStart = date.slice(0, 4);
-    const monthStart = date.slice(4, 6);
-    const dayStart = date.slice(6, 8);
-    //마감 날짜를 3부분으로 분할
-    const yearEnd = date.slice(8, 12);
-    const monthEnd = date.slice(12, 14);
-    const dayEnd = date.slice(14, 16);
-
-    let formattedDate;
-    if (yearStart === yearEnd) {
-      formattedDate = `${yearStart}.${monthStart}.${dayStart} ~ ${monthEnd}.${dayEnd}`;
-    } else {
-      formattedDate = `${yearStart}.${monthStart}.${dayStart} ~ ${yearEnd}.${monthEnd}.${dayEnd}`;
-    }
-    const resultDate = `${formattedDate}, ${place}`;
-    return resultDate;
-  };
-
   return (
     <>
       <Swiper
@@ -45,7 +17,8 @@ const MainCarousel = () => {
         slidesPerView={1.04}
         centeredSlides={false}
         loop={true}
-        autoplay={{ delay: 300000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        className={"mainSwiper"}
       >
         {MAIN_RESPONSE.data.map((item, index) => (
           <SwiperSlide key={item.id}>
@@ -62,7 +35,7 @@ const MainCarousel = () => {
                         <div>{item.subTitle}</div>
                       </S.SubTitle>
                     </S.TitleAndSubTitle>
-                    <S.PeriodAndPlace>{formatDatePlace(item.period, item.place)}</S.PeriodAndPlace>
+                    <S.PeriodAndPlace>{formatData(item.period, item.place)}</S.PeriodAndPlace>
                   </S.TextBox>
                   <S.Indicator>
                     <S.CurrentIndex>

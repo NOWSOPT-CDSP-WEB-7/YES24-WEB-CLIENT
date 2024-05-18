@@ -1,9 +1,9 @@
-.swiper {
+.rankingSwiper {
   display: flex;
   width: 37.5rem;
-  height: 38.3rem;
-  padding: 1rem;
+  height: 26rem;
 
+  padding: 0rem 1rem;
   align-items: flex-start;
   gap: 1rem;
 }

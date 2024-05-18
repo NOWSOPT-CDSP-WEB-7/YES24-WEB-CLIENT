@@ -17,6 +17,9 @@ const colors = {
   UI_02: "#E4E4E4",
   UI_03: "#EEF1F1",
   UI_background: "#FFFFFF",
+
+  Black_Gra:
+    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%)",
 };
 
 const fonts = {
@@ -85,6 +88,12 @@ const fonts = {
     fontWeight: 600,
     fontSize: "1.1rem",
     lineHeight: "1.32rem",
+  },
+  ranking_title_14pt: {
+    fontFamily: "Apple SD Gothic Neo",
+    fontSize: "1.4rem",
+    fontWeight: 800,
+    lineHeight: "1.68rem",
   },
 };
 
