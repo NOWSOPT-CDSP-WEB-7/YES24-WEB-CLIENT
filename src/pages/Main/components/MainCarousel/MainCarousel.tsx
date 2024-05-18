@@ -8,13 +8,13 @@ import { MAIN_RESPONSE } from "@constants/mainCarousel";
 //import Swiper from "swiper/bundle";
 //import "swiper/css/bundle";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { IcOnlyBox } from "@assets/icons";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./swiperStyles.css";
-import { IcOnlyBox } from "@assets/icons";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./MainCarousel.styled";
+import "./swiperStyles.css";
 
 const MainCarousel = () => {
   const formatDatePlace = (date: string, place: string): string => {
@@ -46,6 +46,7 @@ const MainCarousel = () => {
         centeredSlides={false}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
+        className={"mainSwiper"}
       >
         {MAIN_RESPONSE.data.map((item, index) => (
           <SwiperSlide key={item.id}>

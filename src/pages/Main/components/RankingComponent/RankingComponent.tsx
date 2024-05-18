@@ -1,11 +1,11 @@
+import { IcChevronrRight } from "@assets/icons";
 import { useEffect, useState } from "react";
-import * as S from "./RankingComponent.styled";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import * as S from "./RankingComponent.styled";
 import "./swiperStyles.css";
-import { IcChevronrRight } from "@assets/icons";
 
 import { RANKING_RESPONSE } from "@constants/rankingCarousel";
 
@@ -63,6 +63,7 @@ const RankingComponent = () => {
           centeredSlides={false}
           loop={false}
           slidesOffsetAfter={-150}
+          className={"rankingSwiper"}
         >
           {RANKING_RESPONSE.data.map((item) =>
             selectedTab === item.genre ? (
