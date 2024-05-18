@@ -26,6 +26,7 @@ export const GradationBox = styled.div`
     --black_gra,
     linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 57.38%, rgb(0 0 0 / 70%) 100%)
   );
+  border-radius: 0.5rem;
 `;
 
 export const ContentBox = styled.div`
