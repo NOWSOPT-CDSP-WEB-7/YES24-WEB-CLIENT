@@ -19,7 +19,7 @@ const colors = {
   UI_background: "#FFFFFF",
 
   Black_Gra:
-    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.7) 100%)",
+    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%)",
 };
 
 const fonts = {
