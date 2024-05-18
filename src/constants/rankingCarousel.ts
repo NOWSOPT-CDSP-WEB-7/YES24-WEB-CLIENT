@@ -1,11 +1,11 @@
-import no1 from "@assets/rankingCarouselImgs/나훈아.png";
-import no2 from "@assets/rankingCarouselImgs/김창옥.png";
-import no3 from "@assets/rankingCarouselImgs/로이킴.png";
 import no4 from "@assets/rankingCarouselImgs/rank1.png";
 import no5 from "@assets/rankingCarouselImgs/rank2.png";
 import no6 from "@assets/rankingCarouselImgs/rank3.png";
+import no2 from "@assets/rankingCarouselImgs/김창옥.png";
+import no1 from "@assets/rankingCarouselImgs/나훈아.png";
+import no3 from "@assets/rankingCarouselImgs/로이킴.png";
 
-interface ResponseObjType {
+interface ResponseObjPropTypes {
   id: number;
   title: string;
   period: string;
@@ -15,11 +15,11 @@ interface ResponseObjType {
   image: string;
 }
 
-interface ResponseType {
-  data: ResponseObjType[];
+interface ResponsePropTypes {
+  data: ResponseObjPropTypes[];
 }
 
-export const RANKING_RESPONSE: ResponseType = {
+export const RANKING_RESPONSE: ResponsePropTypes = {
   data: [
     {
       id: 1,

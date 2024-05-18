@@ -1,12 +1,4 @@
-//img src로 하면 인식을 못하는 경우가 있어서 다음과 같이 이용
-
 import { MAIN_RESPONSE } from "@constants/mainCarousel";
-
-//import Swiper from "swiper";
-//import "swiper/css";
-
-//import Swiper from "swiper/bundle";
-//import "swiper/css/bundle";
 
 import { IcOnlyBox } from "@assets/icons";
 import { formatData } from "@utils/formatData";
@@ -17,8 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./MainCarousel.styled";
 import "./swiperStyles.css";
 const MainCarousel = () => {
-  //useFormatData 사용해야함
-
   return (
     <>
       <Swiper
