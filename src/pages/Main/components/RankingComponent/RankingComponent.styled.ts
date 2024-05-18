@@ -83,10 +83,7 @@ export const SwiperCardImgGradation = styled.div`
   align-items: flex-end;
   gap: 0.8rem;
 
-  background: var(
-    --black_gra,
-    linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 49%) 57.38%, rgb(0 0 0 / 70%) 100%)
-  );
+  background: ${({ theme }) => theme.colors.Black_Gra};
 
   color: ${({ theme }) => theme.colors.UI_background};
   ${({ theme }) => theme.fonts.title_26pt_Bold};
