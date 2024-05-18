@@ -28,8 +28,8 @@ export const LiLocation = styled.span<{ $isMatched?: boolean }>`
   white-space: pre;
 `;
 export const LiTitle = styled.span<{ $isMatched?: boolean }>`
-  /* color: ${({ $isMatched, theme }) =>
-    $isMatched ? theme.colors.Secondary_orange : theme.colors.Text_01}; */
+  color: ${({ $isMatched, theme }) =>
+    $isMatched ? theme.colors.Secondary_orange : theme.colors.Text_01};
   ${({ theme }) => theme.fonts.sub_14pt};
 `;
 export const SameText = styled.span<{ $matched?: boolean }>`
