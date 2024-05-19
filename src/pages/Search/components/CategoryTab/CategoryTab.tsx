@@ -6,7 +6,7 @@ import RecentShow from "../RecentShow/RecentShow";
 const CategoryTab = () => {
   const [selectedCategory, setSelectedCategory] = useState("word");
 
-  const handleCategoryClick = (category: string) => {
+  const handleClickCategory = (category: string) => {
     setSelectedCategory(category);
   };
   return (
@@ -14,13 +14,13 @@ const CategoryTab = () => {
       <S.CategoryWrapper>
         <S.Category
           $isSelected={selectedCategory === "word"}
-          onClick={() => handleCategoryClick("word")}
+          onClick={() => handleClickCategory("word")}
         >
           최근 검색어
         </S.Category>
         <S.Category
           $isSelected={selectedCategory === "show"}
-          onClick={() => handleCategoryClick("show")}
+          onClick={() => handleClickCategory("show")}
         >
           최근 검색 공연
         </S.Category>
