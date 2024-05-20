@@ -1,7 +1,7 @@
-import SaleCoupon from "./components/SaleCoupon";
 import Header from "../../components/commons/Header/Header";
-import ShowInfo from "./components/ShowInfo";
-import Category from "./components/Category";
+import Category from "./components/Category/Category";
+import SaleCoupon from "./components/SaleCoupon/SaleCoupon";
+import ShowInfo from "./components/ShowInfo/ShowInfo";
 
 const Detail = () => {
   return (

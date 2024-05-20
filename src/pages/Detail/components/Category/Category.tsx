@@ -1,10 +1,10 @@
 import { useState } from "react";
-import * as S from "./Category.styled";
-import ExpectComment from "./ExpectComment";
-import ProductInfo from "./ProductInfo";
 
-import Info from "./Info";
-import ShowPoster from "./ShowPoster";
+import ExpectComment from "../ExpectComment/ExpectComment";
+import ProductInfo from "../ProductInfo/ProductInfo";
+import { Info } from "../ShowInfo/ShowInfo.styled";
+import ShowPoster from "../ShowPoster/ShowPoster";
+import * as S from "./Category.styled";
 
 const Category = () => {
   const [selectedCategory, setSelectedCategory] = useState("Info");
