@@ -1,7 +1,9 @@
-import SaleCoupon from "./components/SaleCoupon";
+import Footer from "../../components/commons/Footer/Footer";
 import Header from "../../components/commons/Header/Header";
-import ShowInfo from "./components/ShowInfo";
 import Category from "./components/Category";
+import ReserveBtn from "./components/ReserveBtn/ReserveBtn";
+import SaleCoupon from "./components/SaleCoupon";
+import ShowInfo from "./components/ShowInfo";
 
 const Detail = () => {
   return (
@@ -10,6 +12,8 @@ const Detail = () => {
       <ShowInfo />
       <SaleCoupon />
       <Category />
+      <Footer />
+      <ReserveBtn />
     </>
   );
 };
