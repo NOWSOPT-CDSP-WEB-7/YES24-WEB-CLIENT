@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InfoWrapper = styled.section`
-  padding: 1.8rem 1rem 0;
+  padding: 1.8rem 1rem 4rem;
 `;
 
 export const TimeLayout = styled.section`
@@ -23,10 +23,12 @@ export const Time = styled.span`
 
 export const NoticeLayout = styled.section`
   padding: 2rem 0;
+
+  border-bottom: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 
 export const NoticeTitle = styled.h3`
-  padding: 2rem 0 0.8rem;
+  padding: 0 0 0.8rem;
   ${({ theme }) => theme.fonts.title_14pt_Bold};
 `;
 
@@ -40,8 +42,8 @@ export const NoticeTime = styled.span`
 `;
 
 export const NoticeDetail = styled.span`
+  color: ${({ theme }) => theme.colors.Text_01};
   white-space: pre-line;
-  ${({ theme }) => theme.colors.Text_01};
   ${({ theme }) => theme.fonts.sub_12pt};
 `;
 
