@@ -1,5 +1,11 @@
+import Filters from "./components/Filters/Filters";
+
 const SearchListPage = () => {
-  return <div>SearchListPage</div>;
+  return (
+    <>
+      <Filters />
+    </>
+  );
 };
 
 export default SearchListPage;
