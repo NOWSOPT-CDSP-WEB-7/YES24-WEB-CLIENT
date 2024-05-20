@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { IcTable } from "../../../../assets/icons";
 
 export const PageWrapper = styled.div`
   padding: 2rem 1rem;
@@ -16,8 +15,11 @@ export const SubTitle = styled.h4`
   ${({ theme }) => theme.fonts.sub_12pt_bold};
 `;
 
-export const TableIcon = styled(IcTable)`
+export const TableImg = styled.img`
+  width: 35.5rem;
+  height: 18rem;
   padding: 1rem 0;
+  object-fit: cover;
 `;
 
 export const Banner = styled.img`

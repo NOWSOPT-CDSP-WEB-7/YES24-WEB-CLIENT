@@ -8,7 +8,7 @@ const ProductInfo = () => {
         <S.Title>상품 정보</S.Title>
         <S.SubTitle>예매취소조건</S.SubTitle>
         <IcCondition />
-        <S.TableIcon />
+        <S.TableImg src={"/src/assets/images/table.png"} />
         <S.SubTitle>취소/환불방법</S.SubTitle>
         <IcRefund />
       </S.PageWrapper>
