@@ -1,5 +1,4 @@
 import * as S from "./RecentWords.styled";
-import { useState } from "react";
 import RecentWord from "../RecentWord/RecentWord";
 
 const RecentWords = () => {
