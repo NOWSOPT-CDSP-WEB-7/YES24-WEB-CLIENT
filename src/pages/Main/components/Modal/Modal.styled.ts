@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const ModalWrapper = styled.dialog`
+  position: fixed;
+  top: calc(100vh - 37.4rem);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -16,9 +18,10 @@ export const ModalWrapper = styled.dialog`
 
   &::backdrop {
     position: fixed;
-    inset: 0;
-
-    background-color: black;
+    background-color: rgb(0 0 0 / 60%);
+  }
+  &:focus {
+    border: 0;
   }
 `;
 
@@ -55,4 +58,6 @@ export const MdoalBottomTextRight = styled.div`
 
   color: ${({ theme }) => theme.colors.Text_01};
   ${({ theme }) => theme.fonts.title_14pt_Bold};
+
+  cursor: pointer;
 `;
