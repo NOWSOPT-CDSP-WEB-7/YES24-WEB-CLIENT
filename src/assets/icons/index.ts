@@ -7,6 +7,7 @@ export { default as IcHeartEmpty } from "./ic_heart_empty.svg?react";
 export { default as IcHeartFill } from "./ic_heart_fill.svg?react";
 export { default as IcLine } from "./ic_line.svg?react";
 export { default as IcLogo } from "./ic_logo_svg.svg?react";
+export { default as IcMore } from "./ic_more.svg?react";
 export { default as IcMy } from "./ic_my.svg?react";
 export { default as IcSearch } from "./ic_search.svg?react";
 export { default as IcYes24Btn } from "./ic_yes24Btn.svg?react";
