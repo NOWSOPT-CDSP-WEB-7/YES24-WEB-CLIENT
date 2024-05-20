@@ -22,6 +22,12 @@ const colors = {
 };
 
 const fonts = {
+  title_15pt_Bold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.5rem",
+    lineHeight: "2.1rem",
+  },
   title_14pt_Bold: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 700,
