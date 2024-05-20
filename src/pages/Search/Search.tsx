@@ -1,3 +1,4 @@
+import CategoryTab from "./components/CategoryTab/CategoryTab.tsx";
 import SearchBar from "./components/SearchBar/SearchBar.tsx";
 import SearchHeader from "./components/SearchHeader/SearchHeader.tsx";
 
@@ -6,6 +7,7 @@ const Search = () => {
     <>
       <SearchHeader />
       <SearchBar />
+      <CategoryTab />
     </>
   );
 };
