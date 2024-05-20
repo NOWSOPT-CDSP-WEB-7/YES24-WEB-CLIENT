@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./CategoryTab.styled";
-import RecentWord from "../RecentWord/RecentWord";
-import RecentShow from "../RecentShow/RecentShow";
+import RecentWords from "../RecentWords/RecentWords";
+import RecentShows from "../RecentShows/RecentShows";
 
 const CategoryTab = () => {
   const [selectedCategory, setSelectedCategory] = useState("word");
@@ -25,7 +25,7 @@ const CategoryTab = () => {
           최근 검색 공연
         </S.Category>
       </S.CategoryWrapper>
-      {selectedCategory === "word" ? <RecentWord /> : <RecentShow />}
+      {selectedCategory === "word" ? <RecentWords /> : <RecentShows />}
     </>
   );
 };

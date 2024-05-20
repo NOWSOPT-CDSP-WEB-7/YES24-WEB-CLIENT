@@ -1,5 +1,5 @@
-const RecentWord = () => {
-  return <div>RecentWord</div>;
+const RecentWords = () => {
+  return <div>RecentWords</div>;
 };
 
-export default RecentWord;
+export default RecentWords;

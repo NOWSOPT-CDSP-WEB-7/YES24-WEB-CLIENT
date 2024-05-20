@@ -1,5 +1,5 @@
-const RecentShow = () => {
-  return <div>RecentShow</div>;
+const RecentShows = () => {
+  return <div>RecentShows</div>;
 };
 
-export default RecentShow;
+export default RecentShows;
