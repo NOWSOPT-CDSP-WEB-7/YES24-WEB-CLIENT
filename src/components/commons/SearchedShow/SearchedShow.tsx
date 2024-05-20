@@ -1,6 +1,5 @@
 import * as S from "./SearchedShow.styled";
 import showImg from "../../../assets/images/show.png";
-import useGetSearchResult from "../../../hooks/useGetSearchResult";
 import DeleteAllBtn from "../DeleteAllBtn/DeleteAllBtn";
 const SearchedShow = () => {
   return (
