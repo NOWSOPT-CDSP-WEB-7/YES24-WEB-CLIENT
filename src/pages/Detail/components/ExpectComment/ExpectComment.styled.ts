@@ -27,7 +27,9 @@ export const BtnLayout = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0;
+
+  border-top: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 
 export const WriteBtn = styled.button`
@@ -49,10 +51,12 @@ export const CategoryBox = styled.section`
 `;
 
 export const Category = styled.span<{ $isActive: boolean }>`
-  padding: 1rem;
+  padding: 1rem 0;
 
   color: ${({ $isActive, theme }) => ($isActive ? theme.colors.Text_strong : theme.colors.Text_02)};
+
   ${({ theme }) => theme.fonts.sub_11pt};
+  cursor: pointer;
 `;
 
 export const CommentBox = styled.article`
@@ -91,7 +95,9 @@ export const ReportBtn = styled.button`
 
   color: ${({ theme }) => theme.colors.Text_01};
   white-space: nowrap;
+
   ${({ theme }) => theme.fonts.sub_11pt};
+  cursor: pointer;
 `;
 
 export const BtnBox = styled.section`
@@ -101,6 +107,7 @@ export const BtnBox = styled.section`
   justify-content: center;
   padding: 1rem;
 
+  cursor: pointer;
   border-top: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 
@@ -111,9 +118,13 @@ export const MoreBtn = styled.button`
 export const BannerFirst = styled.img`
   width: 37.5rem;
   height: 7rem;
+
+  cursor: pointer;
 `;
 
 export const BannerSecond = styled.img`
   width: 37.5rem;
   height: 5.1rem;
+
+  cursor: pointer;
 `;
