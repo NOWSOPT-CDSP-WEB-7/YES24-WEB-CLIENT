@@ -2,6 +2,7 @@ import { IcDevider10px, IcMainBanner } from "@assets/icons";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/commons/Footer/Footer";
 import Header from "../../components/commons/Header/Header";
+import CardBanner from "./components/CardBanner/CardBanner";
 import MainCarousel from "./components/MainCarousel/MainCarousel";
 import MainCategory from "./components/MainCategory/MainCategory";
 import RankingComponent from "./components/RankingComponent/RankingComponent";
@@ -24,6 +25,7 @@ const Main = () => {
       <IcDevider10px />
       <IcMainBanner />
       <IcDevider10px />
+      <CardBanner />
       <Footer />
     </>
   );
