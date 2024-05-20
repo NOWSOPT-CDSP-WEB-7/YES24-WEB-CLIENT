@@ -35,6 +35,7 @@ export const StatusBtn = styled.button<{ color; backcolor }>`
   color: ${({ theme, color }) => theme.colors[color]};
 
   background-color: ${({ theme, backcolor }) => theme.colors[backcolor]};
+  ${({ theme }) => theme.fonts.sub_10pt};
   border-radius: 2px;
 `;
 export const Title = styled.div`

@@ -1,7 +1,11 @@
 import SearchedShow from "../../../../components/commons/SearchedShow/SearchedShow";
 
 const RecentShows = () => {
-  return <SearchedShow />;
+  return (
+    <>
+      <SearchedShow />
+    </>
+  );
 };
 
 export default RecentShows;
