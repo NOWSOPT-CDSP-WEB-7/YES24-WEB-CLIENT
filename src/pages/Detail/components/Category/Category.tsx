@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import ExpectComment from "../ExpectComment/ExpectComment";
+import Info from "../Info/Info";
 import ProductInfo from "../ProductInfo/ProductInfo";
-import { Info } from "../ShowInfo/ShowInfo.styled";
 import ShowPoster from "../ShowPoster/ShowPoster";
 import * as S from "./Category.styled";
 
@@ -14,7 +14,7 @@ const Category = () => {
   };
 
   return (
-    <>
+    <S.EntireWrapper>
       <S.CategoryWrapper>
         <S.Category
           $isSelected={selectedCategory === "Info"}
@@ -52,7 +52,7 @@ const Category = () => {
       ) : (
         ""
       )}
-    </>
+    </S.EntireWrapper>
   );
 };
 
