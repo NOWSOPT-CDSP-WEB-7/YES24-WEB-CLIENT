@@ -1,3 +1,4 @@
+export { default as IcCheckbox } from "./ic_checkbox.svg?react";
 export { default as IcChevronrRight } from "./ic_chevron-right.svg?react";
 export { default as IcChevronUp } from "./ic_chevron_up.svg?react";
 export { default as IcDevider10px } from "./ic_devider_10px.svg?react";
