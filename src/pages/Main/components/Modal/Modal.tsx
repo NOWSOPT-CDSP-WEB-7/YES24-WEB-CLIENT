@@ -17,10 +17,6 @@ const Modal = ({ isOpen, setShowModal }: ModalPropsTypes) => {
       dialog.current?.showModal();
       document.body.style.overflow = "hidden";
       document.body.style.height = "72rem";
-    } else {
-      dialog.current?.close();
-      document.body.style.overflow = "auto";
-      document.body.style.height = "auto";
     }
   }, [isOpen]);
 
