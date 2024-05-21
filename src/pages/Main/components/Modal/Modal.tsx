@@ -12,7 +12,6 @@ interface ModalPropsTypes {
 const Modal = ({ isOpen, setShowModal }: ModalPropsTypes) => {
   const dialog = useRef<HTMLDialogElement>(null);
 
-  //dialog 관련 Trouble Shooting
   useEffect(() => {
     if (isOpen) {
       dialog.current?.showModal();
