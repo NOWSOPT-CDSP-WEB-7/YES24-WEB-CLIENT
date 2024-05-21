@@ -7,7 +7,7 @@ export const SearchListWrapper = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   width: 100dvw;
-  min-height: calc(100dvh - 28.2rem);
+  min-height: calc(100dvh - 10.5rem);
 
   background-color: ${({ theme }) => theme.colors.UI_background};
 `;
