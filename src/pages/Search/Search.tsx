@@ -10,7 +10,9 @@ const Search = () => {
       <SearchHeader />
       <SearchBar />
       <CategoryTab />
-      <Footer />
+      <S.FooterWrapper>
+        <Footer />
+      </S.FooterWrapper>
     </S.SearchWrapper>
   );
 };
