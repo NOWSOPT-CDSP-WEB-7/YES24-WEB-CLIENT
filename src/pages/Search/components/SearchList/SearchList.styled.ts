@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const SearchListWrapper = styled.section`
+  position: absolute;
+  z-index: 99;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100dvw;
+  min-height: calc(100dvh - 28.2rem);
+
+  background-color: ${({ theme }) => theme.colors.UI_background};
 `;
 export const SearchLi = styled.li`
   display: flex;
