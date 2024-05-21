@@ -1,6 +1,6 @@
-import { IcBtnShare, IcHeartFill } from "../../../assets/icons";
-import { categories } from "../../../constants/showDetailCategory";
-import { SHOW_DETAIL } from "../../../constants/showDetailData";
+import { IcBtnShare, IcHeartFill } from "../../../../assets/icons";
+import { categories } from "../../../../constants/showDetailCategory";
+import { SHOW_DETAIL } from "../../../../constants/showDetailData";
 
 import * as S from "./ShowInfo.styled";
 

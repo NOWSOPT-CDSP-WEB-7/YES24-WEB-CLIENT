@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
+export const EntireWrapper = styled.div``;
+
 export const CategoryWrapper = styled.section`
+  position: sticky;
+  top: 0;
   display: flex;
   gap: 0.8rem;
   width: 100%;
   padding: 1rem 1rem 0;
 
+  background-color: ${({ theme }) => theme.colors.UI_background};
   border-bottom: 2px solid ${({ theme }) => theme.colors.UI_03};
 `;
 

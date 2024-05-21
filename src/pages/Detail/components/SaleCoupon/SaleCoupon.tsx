@@ -1,4 +1,4 @@
-import { IcDownload } from "../../../assets/icons";
+import { IcDownload } from "../../../../assets/icons/index.ts";
 import * as S from "./SaleCoupon.styled.ts";
 
 const SaleCoupon = () => {
