@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import * as S from "./CategoryTab.styled";
 import RecentWords from "../RecentWords/RecentWords";
