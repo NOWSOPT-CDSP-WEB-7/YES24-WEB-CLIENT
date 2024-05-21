@@ -4,12 +4,12 @@ import banner2 from "@assets/modalImgs/modal_banner2.png";
 import { useEffect, useRef } from "react";
 import * as S from "./Modal.styled";
 
-interface ModalPropsTypes {
+interface ModalPropTypes {
   isOpen: boolean;
   setShowModal: (prop: boolean) => void;
 }
 
-const Modal = ({ isOpen, setShowModal }: ModalPropsTypes) => {
+const Modal = ({ isOpen, setShowModal }: ModalPropTypes) => {
   const dialog = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
