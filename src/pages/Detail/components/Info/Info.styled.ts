@@ -61,11 +61,11 @@ export const ShowSecondImg = styled.img`
 `;
 
 export const BannerFirstImg = styled.img`
-  width: 35.5rem;
+  width: 37.5rem;
   height: 4.8rem;
 `;
 
 export const BannerSecondImg = styled.img`
-  width: 35.5rem;
+  width: 37.5rem;
   height: 6.6rem;
 `;
