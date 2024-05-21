@@ -1,5 +1,11 @@
+import SearchedShow from "../../../../components/commons/SearchedShow/SearchedShow";
+
 const RecentShows = () => {
-  return <div>RecentShows</div>;
+  return (
+    <>
+      <SearchedShow />
+    </>
+  );
 };
 
 export default RecentShows;
