@@ -35,14 +35,14 @@ export const ModalBanner = styled.div`
   align-self: stretch;
 `;
 
-export const MdoalBottomText = styled.div`
+export const ModalBottomText = styled.div`
   display: flex;
   align-items: center;
   align-self: stretch;
   justify-content: space-between;
 `;
 
-export const MdoalBottomTextLeft = styled.div`
+export const ModalBottomTextLeft = styled.div`
   display: flex;
   gap: 0.7rem;
   align-items: center;
@@ -51,7 +51,7 @@ export const MdoalBottomTextLeft = styled.div`
   ${({ theme }) => theme.fonts.sub_14pt};
 `;
 
-export const MdoalBottomTextRight = styled.div`
+export const ModalBottomTextRight = styled.div`
   display: flex;
   gap: 0.8rem;
   align-items: center;

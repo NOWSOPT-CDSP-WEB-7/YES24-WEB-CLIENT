@@ -33,13 +33,13 @@ const Modal = ({ isOpen, setShowModal }: ModalPropsTypes) => {
         <img src={banner1} />
         <img src={banner2} />
       </S.ModalBanner>
-      <S.MdoalBottomText>
-        <S.MdoalBottomTextLeft>
+      <S.ModalBottomText>
+        <S.ModalBottomTextLeft>
           <IcCheckbox />
           오늘은 그만 보기
-        </S.MdoalBottomTextLeft>
-        <S.MdoalBottomTextRight onClick={handleClickClose}>닫기</S.MdoalBottomTextRight>
-      </S.MdoalBottomText>
+        </S.ModalBottomTextLeft>
+        <S.ModalBottomTextRight onClick={handleClickClose}>닫기</S.ModalBottomTextRight>
+      </S.ModalBottomText>
     </S.ModalWrapper>
   );
 };
