@@ -12,16 +12,18 @@ export const ModalWrapper = styled.dialog`
   padding: 2rem;
 
   background: ${({ theme }) => theme.colors.UI_background};
-  border: 0 solid ${({ theme }) => theme.colors.UI_02};
+  border: none;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.UI_02};
   border-radius: 1rem 1rem 0 0;
 
   &::backdrop {
     position: fixed;
+
     background-color: rgb(0 0 0 / 60%);
   }
+
   &:focus {
-    border: 0;
+    outline: none;
   }
 `;
 
