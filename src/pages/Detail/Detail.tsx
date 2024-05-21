@@ -13,7 +13,9 @@ const Detail = () => {
       <ShowInfo />
       <SaleCoupon />
       <Category />
-      <Footer />
+      <S.FooterWrapper>
+        <Footer />
+      </S.FooterWrapper>
       <ReserveBtn />
     </S.DetailWrapper>
   );
