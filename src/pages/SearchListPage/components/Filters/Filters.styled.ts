@@ -57,6 +57,7 @@ export const SelectedSort = styled.span`
   padding: 0.5rem;
 
   color: ${({ theme }) => theme.colors.Text_01};
+  ${({ theme }) => theme.fonts.sub_12pt};
 `;
 export const DropdownBtn = styled.button`
   display: flex;
@@ -71,9 +72,9 @@ export const SortList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-
   padding: 0.5rem;
 
+  background-color: ${({ theme }) => theme.colors.UI_background};
   border: 1px solid ${({ theme }) => theme.colors.UI_02};
   border-radius: 2px;
 `;
