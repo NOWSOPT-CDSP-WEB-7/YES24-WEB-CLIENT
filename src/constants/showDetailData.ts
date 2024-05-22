@@ -10,7 +10,7 @@ export const SHOW_DETAIL: ShowDetailPropTypes = {
       filmRating: 8,
       location: "울산",
       place: "울산문화예술회관 대공연장",
-      image: "src/assets/images/show.png",
+      image: "src/assets/images/detailPoster.png",
       runtime: 175,
     },
   ],
