@@ -16,7 +16,7 @@ const RecentWords = () => {
     }
   };
   if (words.length === 0) {
-    return <div>최근 검색어가 없습니다.</div>;
+    return <S.NoRecentWords>최근 검색어가 없습니다</S.NoRecentWords>;
   }
   const handleDeleteAll = () => {
     localStorage.removeItem("recentWordsList");
