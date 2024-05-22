@@ -1,7 +1,7 @@
 import axios from "axios";
 
 interface likePropTypes {
-  success: string;
+  success: boolean;
   data: {
     isLike: boolean;
   };
@@ -19,6 +19,7 @@ export const patchLike = async (runShowId: number) => {
       }
     );
     return response.data.data.isLike;
+    console.log(response);
   } catch (error) {
     console.error();
   }
