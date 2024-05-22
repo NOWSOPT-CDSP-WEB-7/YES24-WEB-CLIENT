@@ -3,15 +3,16 @@ import axios from "axios";
 interface RankResponseObjPropTypes {
   id: number;
   title: string;
-  subTitle: string;
-  image: string;
   period: string;
   place: string;
+  genre: string;
+  ranking: number;
+  image: string;
 }
 
 type RankResponsePropTypes = RankResponseObjPropTypes[];
 
-export const fetchRanking = async (): Promise<RankResponsePropTypes> => {
+export const fetchRank = async (): Promise<RankResponsePropTypes> => {
   try {
     const response = await axios.get(`${import.meta.env.VITE_BASE_URL}show/rank`, {
       headers: {

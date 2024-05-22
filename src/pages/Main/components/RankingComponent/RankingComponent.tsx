@@ -1,3 +1,4 @@
+import { fetchRank } from "@apis/Main/fetchRank";
 import { IcChevronrRight } from "@assets/icons";
 import { formatData } from "@utils/formatData";
 import { useEffect, useState } from "react";
@@ -8,9 +9,28 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./RankingComponent.styled";
 import "./swiperStyles.css";
 
-import { RANKING_RESPONSE } from "@constants/rankingCarousel";
-
 const RankingComponent = () => {
+  interface RankResponseObjPropTypes {
+    id: number;
+    title: string;
+    period: string;
+    place: string;
+    genre: string;
+    ranking: number;
+    image: string;
+  }
+
+  type RankResponsePropTypes = RankResponseObjPropTypes[];
+  const [rankResponse, setRankResponse] = useState<RankResponsePropTypes>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchRank();
+      setRankResponse(data);
+    };
+    getData();
+  }, []);
+
   const [selectedTab, setSelectedTab] = useState("concert");
 
   const handleClickTab = (tab: string) => {
@@ -53,8 +73,8 @@ const RankingComponent = () => {
           slidesOffsetAfter={-150}
           className={"rankingSwiper"}
         >
-          {RANKING_RESPONSE.data.map(
-            (item) =>
+          {rankResponse.map(
+            (item: RankResponseObjPropTypes) =>
               selectedTab === item.genre && (
                 <SwiperSlide key={item.id}>
                   <S.SwiperCard>
