@@ -1,12 +1,23 @@
 import * as S from "./RecentWords.styled";
 import RecentWord from "../RecentWord/RecentWord";
 import DeleteAllBtn from "@components/commons/DeleteAllBtn/DeleteAllBtn";
+import { useEffect, useState } from "react";
 
 const RecentWords = () => {
-  const words: string[] = ["레베카", "울산", "서울"];
+  const [words, setWords] = useState([]);
+  useEffect(() => {
+    const recentWordsList = localStorage.getItem("recentWordsList");
+    if (recentWordsList) {
+      const parsedWords = JSON.parse(recentWordsList);
+      setWords(parsedWords);
+    }
+  }, []);
   if (words.length === 0) {
     return <div>최근 검색어가 없습니다.</div>;
   }
+  const handleDeleteAll = () => {
+    localStorage.removeItem("recentWordsList");
+  };
   return (
     <>
       <S.Wrapper>
@@ -18,7 +29,7 @@ const RecentWords = () => {
           </div>
         )}
       </S.Wrapper>
-      <DeleteAllBtn />
+      <DeleteAllBtn onClick={handleDeleteAll} />
     </>
   );
 };
