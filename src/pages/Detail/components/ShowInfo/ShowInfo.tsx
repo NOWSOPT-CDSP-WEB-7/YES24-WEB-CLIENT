@@ -5,10 +5,12 @@ import { categories } from "../../../../constants/showDetailCategory";
 
 import * as S from "./ShowInfo.styled";
 import { ShowDetailPropTypes, fetchShowDetail } from "../../../../apis/Detail/fetchShowDetail";
+import { patchLike } from "src/apis/Detail/patchLike";
 
 const ShowInfo = () => {
   const { runShowId } = useParams();
   const [showData, setShowData] = useState<ShowDetailPropTypes>();
+  const [isLike, setIslLike] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +27,10 @@ const ShowInfo = () => {
     };
     fetchData();
   }, [runShowId]);
+
+  const fetchLikeData = () => {
+    patchLike();
+  };
 
   return (
     <>
