@@ -15,6 +15,8 @@ interface SearchResultPropTypes {
 
 const FiltersAndResult = () => {
   const [searchResult, setSearchResult] = useState<SearchResultPropTypes[]>([]);
+  const [genres, setGenres] = useState<string[]>([]);
+
   useEffect(() => {
     const searchWord = localStorage.getItem("searchWord");
     if (searchWord) {
@@ -24,10 +26,13 @@ const FiltersAndResult = () => {
   const fetchSearchResults = async (word: string) => {
     const result = await getSearchResult(word);
     setSearchResult(result);
+
+    const extractedGenres = result.map((item) => item.genre);
+    setGenres(extractedGenres);
   };
   return (
     <>
-      <Filters />
+      <Filters genres={genres} />
       <FilteredResultList searchResult={searchResult} />
     </>
   );

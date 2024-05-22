@@ -1,5 +1,4 @@
 import * as S from "./SearchedShow.styled";
-import showImg from "../../../assets/images/show.png";
 
 interface SearchResultPropTypes {
   id: number;
@@ -16,7 +15,7 @@ const SearchedShow = ({ show }: { show: SearchResultPropTypes }) => {
   return (
     <>
       <S.ShowWrapper>
-        <S.ShowImg src={showImg} />
+        <S.ShowImg src={image} />
         <S.ShowRightSec>
           <S.ShowStatusBtns>
             <S.StatusBtn color={"Text_01"} backcolor={"UI_02"}>
