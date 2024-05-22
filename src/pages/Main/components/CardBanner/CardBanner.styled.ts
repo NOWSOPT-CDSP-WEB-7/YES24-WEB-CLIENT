@@ -15,14 +15,17 @@ export const CardWrapper = styled.article`
   flex-direction: column;
   align-items: flex-start;
 
-  /* text_gra */
   box-shadow: 0 0.1rem 0.1rem 0 rgb(0 0 0 / 15%);
+  cursor: pointer;
   border-radius: 0.4rem;
 `;
 
 export const CardImg = styled.img`
   width: 35.5rem;
   height: 14.6rem;
+
+  box-shadow: 0 0.1rem 0.1rem 0 rgb(0 0 0 / 15%);
+  border-radius: 0.4rem;
 `;
 
 export const CardTextBox = styled.div`
@@ -35,6 +38,8 @@ export const CardTextBox = styled.div`
   padding: 1rem;
 
   background: ${({ theme }) => theme.colors.UI_background};
+  box-shadow: 0 0.1rem 0.1rem 0 rgb(0 0 0 / 15%);
+  border-radius: 0.4rem;
 `;
 
 export const CardTitle = styled.div`

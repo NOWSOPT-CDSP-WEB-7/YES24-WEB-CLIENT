@@ -17,7 +17,7 @@ const MainCarousel = () => {
         slidesPerView={1.04}
         centeredSlides={false}
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 300000, disableOnInteraction: false }}
         className={"mainSwiper"}
       >
         {MAIN_RESPONSE.data.map((item, index) => (

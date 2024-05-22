@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
-#dermy-data
-/public/data/search-result.json
