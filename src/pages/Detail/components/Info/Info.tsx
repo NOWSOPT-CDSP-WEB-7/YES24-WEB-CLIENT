@@ -19,8 +19,8 @@ const Info = () => {
           <S.ShowSecondImg src={DETAIL_INFO.showImg2} />
         </S.ImgLayout>
       </S.InfoWrapper>
-      <S.BannerFirstImg src={DETAIL_INFO.bannerImg1} />
-      <S.BannerSecondImg src={DETAIL_INFO.bannerImg2} />
+      <S.BannerFirstImg src={DETAIL_INFO.bannerImg2} />
+      <S.BannerSecondImg src={DETAIL_INFO.bannerImg1} />
     </>
   );
 };
