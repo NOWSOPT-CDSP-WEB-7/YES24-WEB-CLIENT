@@ -1,7 +1,8 @@
-import { MAIN_RESPONSE } from "@constants/mainCarousel";
+import { fetchMain } from "@apis/Main/fetchMain";
 
 import { IcOnlyBox } from "@assets/icons";
 import { formatData } from "@utils/formatData";
+import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
@@ -9,6 +10,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./MainCarousel.styled";
 import "./swiperStyles.css";
 const MainCarousel = () => {
+  interface MainResponsObjPropTypes {
+    id: number;
+    title: string;
+    subTitle: string;
+    image: string;
+    period: string;
+    place: string;
+  }
+
+  //한번 다른 식으로도 사용해봄
+  type MainResponsePropTypes = MainResponsObjPropTypes[];
+  const [mainResponse, setMainResponse] = useState<MainResponsePropTypes>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchMain();
+      setMainResponse(data);
+    };
+
+    getData();
+  }, []);
   return (
     <>
       <Swiper
@@ -20,7 +42,7 @@ const MainCarousel = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className={"mainSwiper"}
       >
-        {MAIN_RESPONSE.data.map((item, index) => (
+        {mainResponse.map((item: MainResponsObjPropTypes, index: number) => (
           <SwiperSlide key={item.id}>
             <S.SwiperCard imgsrc={item.image}>
               <S.GradationBox>

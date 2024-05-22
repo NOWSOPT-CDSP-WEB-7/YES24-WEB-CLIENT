@@ -1,4 +1,5 @@
 import { IcDevider10px, IcMainBanner } from "@assets/icons";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/commons/Footer/Footer";
@@ -21,6 +22,21 @@ const Main = () => {
   const navigateSearch = () => {
     navigate("/search");
   };
+
+  const fetchRanking = async () => {
+    try {
+      const data = await axios.get(`${import.meta.env.VITE_BASE_URL}show/rank`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log("두번쨰 :", data);
+    } catch (error) {
+      console.log("에러발생2", error);
+    }
+  };
+
+  fetchRanking();
 
   return (
     <>
