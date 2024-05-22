@@ -1,6 +1,5 @@
 export { default as IcCheckbox } from "./ic_checkbox.svg?react";
 export { default as IcChevronrRight } from "./ic_chevron-right.svg?react";
-export { default as IcChevronUp } from "./ic_chevron_up.svg?react";
 export { default as IcDevider10px } from "./ic_devider_10px.svg?react";
 export { default as IcBtnShare } from "./ic_btnShare.svg?react";
 export { default as IcChevronUp } from "./ic_chevron_up.svg?react";
@@ -13,7 +12,6 @@ export { default as IcHeartFill } from "./ic_heart_fill.svg?react";
 export { default as IcLine } from "./ic_line.svg?react";
 export { default as IcLogo } from "./ic_logo_svg.svg?react";
 export { default as IcMainBanner } from "./ic_main_banner.svg?react";
-export { default as IcMy } from "./ic_my.svg?react";
 export { default as IcOnlyBox } from "./ic_only_box.svg?react";
 export { default as IcMore } from "./ic_more.svg?react";
 export { default as IcMy } from "./ic_my.svg?react";
