@@ -1,4 +1,8 @@
 import styled from "styled-components";
+interface StatusBtnPropTypes {
+  color: string;
+  backcolor: string;
+}
 
 export const ShowWrapper = styled.article`
   display: flex;
@@ -25,7 +29,7 @@ export const ShowStatusBtns = styled.div`
   gap: 0.4rem;
   align-items: flex-start;
 `;
-export const StatusBtn = styled.button<{ color; backcolor }>`
+export const StatusBtn = styled.button<StatusBtnPropTypes>`
   display: inline-flex;
   gap: 0.8rem;
   align-items: center;
