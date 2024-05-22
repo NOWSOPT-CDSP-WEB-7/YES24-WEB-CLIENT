@@ -5,15 +5,17 @@ import { IcDropDown } from "../../../../assets/icons";
 const filters = ["전체(136)", "뮤지컬/연극(116)", "클래식/무용(5)", "전시/행사(15)"];
 const options = ["정확도순", "공연임박순", "판매많은순"];
 const Filters = () => {
-  const [activeFilter, setActiveFilter] = useState(null);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [selectedOption, setSelectedOption] = useState<string>(options[0]);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
   };
+
   const toggleDropdown = () => setIsOpen((prevIsOpen) => !prevIsOpen);
-  const handleOptionClick = (option) => {
+
+  const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     setIsOpen(false);
   };

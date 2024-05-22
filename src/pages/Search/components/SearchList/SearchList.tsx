@@ -2,7 +2,11 @@ import useGetSearchResult from "../../../../hooks/useGetSearchResult.ts";
 import * as S from "./SearchList.styled.ts";
 import showImg from "../../../../assets/images/show.png";
 
-const SearchList = ({ input }) => {
+interface InputPropTypes {
+  input: string;
+}
+
+const SearchList = ({ input }: InputPropTypes) => {
   const { searchResult } = useGetSearchResult();
 
   const highlightText = (text: string, searchInput: string) => {
