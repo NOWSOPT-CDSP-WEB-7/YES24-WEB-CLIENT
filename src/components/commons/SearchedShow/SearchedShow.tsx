@@ -1,6 +1,18 @@
 import * as S from "./SearchedShow.styled";
 import showImg from "../../../assets/images/show.png";
-const SearchedShow = () => {
+
+interface SearchResultPropTypes {
+  id: number;
+  title: string;
+  period: string;
+  location: string;
+  place: string;
+  genre: string;
+  image: string;
+}
+
+const SearchedShow = ({ show }: { show: SearchResultPropTypes }) => {
+  const { title, image, location, period, place } = show;
   return (
     <>
       <S.ShowWrapper>
@@ -17,10 +29,10 @@ const SearchedShow = () => {
               단독
             </S.StatusBtn>
           </S.ShowStatusBtns>
-          <S.Title>[울산] 뮤지컬 [레베카] 10주년 기념 공연 앙코르</S.Title>
+          <S.Title>{`[${location}] ${title}`}</S.Title>
           <S.PeriodAndPlace>
-            <S.Period>2024.06.13 ~ 2024.04.14</S.Period>
-            <S.Place>공연 장소</S.Place>
+            <S.Period>{period}</S.Period>
+            <S.Place>{place}</S.Place>
           </S.PeriodAndPlace>
         </S.ShowRightSec>
       </S.ShowWrapper>

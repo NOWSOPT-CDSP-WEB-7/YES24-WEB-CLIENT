@@ -6,9 +6,6 @@ export const ListPageWrapper = styled.section`
   width: 100%;
   min-height: 100dvh;
 `;
-export const FiltersWrapper = styled.section`
-  /* height: 100rem; */
-`;
 export const FooterWrapper = styled.section`
   margin-top: auto;
 `;
