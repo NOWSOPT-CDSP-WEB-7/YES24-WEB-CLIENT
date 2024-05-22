@@ -18,7 +18,6 @@ const FiltersAndResult = () => {
   useEffect(() => {
     const searchWord = localStorage.getItem("searchWord");
     if (searchWord) {
-      //   setInput(searchWord);
       fetchSearchResults(searchWord);
     }
   }, []);
