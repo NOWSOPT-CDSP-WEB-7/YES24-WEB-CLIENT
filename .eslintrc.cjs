@@ -33,7 +33,7 @@ module.exports = {
     "no-multiple-empty-lines": "warn", // 연속된 빈 줄 사용을 방지
     "arrow-spacing": "warn", // 화살표 함수의 화살표 주변에 공백 사용을 강제
     "no-const-assign": "error", // const 변수에 재할당을 방지
-    // "no-extra-parens": "warn", // 불필요한 괄호 사용을 방지
+    //"no-extra-parens": "warn", // 불필요한 괄호 사용을 방지
     "no-multi-spaces": "error", // 연속된 공백 사용을 방지
     "prefer-const": "error", // 변수 재할당을 하지 않는 경우 const 사용을 권장
     "no-else-return": "warn", // else 블록에서 return 사용을 방지
