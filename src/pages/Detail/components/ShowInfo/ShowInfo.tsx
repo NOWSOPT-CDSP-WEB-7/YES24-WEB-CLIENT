@@ -1,35 +1,43 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IcBtnShare, IcHeartFill } from "../../../../assets/icons";
+import { IcBtnShare, IcHeartEmpty, IcHeartFill } from "../../../../assets/icons";
 import { categories } from "../../../../constants/showDetailCategory";
 
 import * as S from "./ShowInfo.styled";
 import { ShowDetailPropTypes, fetchShowDetail } from "../../../../apis/Detail/fetchShowDetail";
-import { patchLike } from "src/apis/Detail/patchLike";
+import { patchLike } from "../../../../apis/Detail/patchLike";
 
 const ShowInfo = () => {
   const { runShowId } = useParams();
   const [showData, setShowData] = useState<ShowDetailPropTypes>();
-  const [isLike, setIslLike] = useState<boolean>(false);
+  const [isLike, setIsLike] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (runShowId) {
-        try {
-          const data = await fetchShowDetail(Number(runShowId));
-          if (data) {
-            setShowData(data);
-          }
-        } catch (error) {
-          console.error(error);
-        }
+      try {
+        const data = await fetchShowDetail(Number(runShowId));
+        setShowData(data);
+      } catch (error) {
+        console.error(error);
       }
     };
     fetchData();
   }, [runShowId]);
 
-  const fetchLikeData = () => {
-    patchLike();
+  const handleLikeClick = async () => {
+    try {
+      const likeStatus = await patchLike(Number(runShowId));
+      setIsLike(likeStatus ?? false);
+      setShowData((prevData) => {
+        if (!prevData) {
+          return prevData;
+        }
+        const updatedLikeCount = likeStatus ? prevData.likeCount + 1 : prevData.likeCount - 1;
+        return { ...prevData, likeCount: updatedLikeCount };
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -56,8 +64,8 @@ const ShowInfo = () => {
               </S.InfoBox>
             </S.ShowInfoContainer>
             <S.BtnLayout>
-              <S.HeartBtnBox>
-                <IcHeartFill />
+              <S.HeartBtnBox onClick={handleLikeClick}>
+                {isLike ? <IcHeartFill /> : <IcHeartEmpty />}
                 <S.HeartNum>{showData?.likeCount}</S.HeartNum>
               </S.HeartBtnBox>
               <IcBtnShare />
