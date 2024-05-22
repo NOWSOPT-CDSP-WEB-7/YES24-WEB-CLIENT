@@ -5,6 +5,7 @@ export const EntireWrapper = styled.div``;
 export const CategoryWrapper = styled.section`
   position: sticky;
   top: 0;
+  z-index: 3;
   display: flex;
   gap: 0.8rem;
   width: 100%;
