@@ -4,6 +4,7 @@ import Main from "./pages/Main/Main";
 import SearchListPage from "./pages/SearchListPage/SearchListPage";
 import Detail from "./pages/Detail/Detail";
 
+
 const Router = () => {
   return (
     <BrowserRouter>

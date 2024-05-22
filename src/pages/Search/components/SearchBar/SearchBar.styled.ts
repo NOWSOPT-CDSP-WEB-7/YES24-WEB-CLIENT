@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const SearchBarAndListWrapper = styled.div`
+  position: relative;
+  padding: 0;
+`;
 export const SearchBarContainer = styled.section`
   padding: 0.8rem 1rem;
 `;

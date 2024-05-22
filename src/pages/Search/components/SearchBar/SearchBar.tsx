@@ -6,7 +6,7 @@ import SearchList from "../SearchList/SearchList.tsx";
 const SearchBar = () => {
   const { input, handleInputChange } = useChangeInput();
   return (
-    <>
+    <S.SearchBarAndListWrapper>
       <S.SearchBarContainer>
         <S.SearchBarWrapper>
           <S.SearchBarInput placeholder="검색어를 입력해주세요" onChange={handleInputChange} />
@@ -21,7 +21,7 @@ const SearchBar = () => {
         </S.SearchBarWrapper>
       </S.SearchBarContainer>
       {input && <SearchList input={input} />}
-    </>
+    </S.SearchBarAndListWrapper>
   );
 };
 
