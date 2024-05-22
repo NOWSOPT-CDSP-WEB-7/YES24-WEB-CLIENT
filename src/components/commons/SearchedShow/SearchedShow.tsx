@@ -1,6 +1,5 @@
 import * as S from "./SearchedShow.styled";
 import showImg from "../../../assets/images/show.png";
-import DeleteAllBtn from "../DeleteAllBtn/DeleteAllBtn";
 const SearchedShow = () => {
   return (
     <>
@@ -25,7 +24,6 @@ const SearchedShow = () => {
           </S.PeriodAndPlace>
         </S.ShowRightSec>
       </S.ShowWrapper>
-      <DeleteAllBtn />
     </>
   );
 };
