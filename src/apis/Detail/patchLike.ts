@@ -1,21 +1,24 @@
 import axios from "axios";
 
 interface likePropTypes {
-  status: number;
   success: string;
   data: {
     isLike: boolean;
-  }[];
+  };
 }
 
 export const patchLike = async (runShowId: number) => {
   try {
-    const response = await axios.patch<likePropTypes>(`/runshow/like/${runShowId}`, {
-      headers: {
-        memberId: 1,
-      },
-    });
-    return response;
+    const response = await axios.patch<likePropTypes>(
+      `${import.meta.env.VITE_BASE_URL}runshow/like/${runShowId}`,
+      {},
+      {
+        headers: {
+          memberId: 1,
+        },
+      }
+    );
+    return response.data.data.isLike;
   } catch (error) {
     console.error();
   }
