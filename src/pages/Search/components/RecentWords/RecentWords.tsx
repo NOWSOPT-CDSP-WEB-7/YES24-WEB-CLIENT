@@ -6,17 +6,21 @@ import { useEffect, useState } from "react";
 const RecentWords = () => {
   const [words, setWords] = useState([]);
   useEffect(() => {
+    getRecentWordsList();
+  }, []);
+  const getRecentWordsList = () => {
     const recentWordsList = localStorage.getItem("recentWordsList");
     if (recentWordsList) {
       const parsedWords = JSON.parse(recentWordsList);
       setWords(parsedWords);
     }
-  }, []);
+  };
   if (words.length === 0) {
     return <div>최근 검색어가 없습니다.</div>;
   }
   const handleDeleteAll = () => {
     localStorage.removeItem("recentWordsList");
+    setWords([]);
   };
   return (
     <>
