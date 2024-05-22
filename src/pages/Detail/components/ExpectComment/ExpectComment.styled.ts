@@ -120,6 +120,7 @@ export const BannerFirst = styled.img`
   height: 7rem;
 
   cursor: pointer;
+  display: block;
 `;
 
 export const BannerSecond = styled.img`
@@ -127,4 +128,5 @@ export const BannerSecond = styled.img`
   height: 5.1rem;
 
   cursor: pointer;
+  display: block;
 `;

@@ -65,9 +65,11 @@ export const ShowSecondImg = styled.img`
 export const BannerFirstImg = styled.img`
   width: 37.5rem;
   height: 4.8rem;
+  display: block;
 `;
 
 export const BannerSecondImg = styled.img`
   width: 37.5rem;
   height: 6.6rem;
+  display: block;
 `;
