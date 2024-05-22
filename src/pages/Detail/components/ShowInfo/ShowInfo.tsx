@@ -17,7 +17,6 @@ const ShowInfo = () => {
           const data = await fetchShowDetail(Number(runShowId));
           if (data) {
             setShowData(data);
-            console.log(data);
           }
         } catch (error) {
           console.error(error);
