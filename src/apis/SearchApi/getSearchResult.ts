@@ -3,8 +3,7 @@ import axios from "axios";
 export const getSearchResult = async (input: string) => {
   try {
     const response = await axios.get(
-      // `${import.meta.env.VITE_BASE_URL}runshow/search?query=${input}`,
-      "/data/search-result.json",
+      `${import.meta.env.VITE_BASE_URL}runshow/search?query=${input}`,
       {
         headers: {
           "Content-Type": "application/json",
