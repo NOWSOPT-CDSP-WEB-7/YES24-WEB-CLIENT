@@ -7,7 +7,7 @@ export const WordWrapper = styled.article`
   width: 100%;
   padding: 1rem 1rem 1rem 2rem;
 
-  border-bottom: ${({ theme }) => theme.colors.UI_02};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 export const Word = styled.span`
   color: ${({ theme }) => theme.colors.Text_strong};

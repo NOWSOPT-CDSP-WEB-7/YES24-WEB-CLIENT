@@ -1,5 +1,6 @@
 import * as S from "./RecentWords.styled";
 import RecentWord from "../RecentWord/RecentWord";
+import DeleteAllBtn from "@components/commons/DeleteAllBtn/DeleteAllBtn";
 
 const RecentWords = () => {
   const words = ["레베카", "울산", "서울"];
@@ -7,15 +8,18 @@ const RecentWords = () => {
     return <div>최근 검색어가 없습니다.</div>;
   }
   return (
-    <S.Wrapper>
-      {words && (
-        <div>
-          {words.map((word, i) => {
-            return <RecentWord key={i} word={word} />;
-          })}
-        </div>
-      )}
-    </S.Wrapper>
+    <>
+      <S.Wrapper>
+        {words && (
+          <div>
+            {words.map((word, i) => {
+              return <RecentWord key={i} word={word} />;
+            })}
+          </div>
+        )}
+      </S.Wrapper>
+      <DeleteAllBtn />
+    </>
   );
 };
 
