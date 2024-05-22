@@ -1,5 +1,5 @@
-import { IcChevronUp, IcGlobalBtn, IcLine, IcYes24Btn } from "../../assets/icons/index.ts";
-import { FOOTER } from "../../constants/footer.ts";
+import { IcChevronUp, IcGlobalBtn, IcLine, IcYes24Btn } from "../../../assets/icons/index.ts";
+import { FOOTER } from "../../../constants/footer.ts";
 import * as S from "./Footer.styled.ts";
 
 const Footer = () => {

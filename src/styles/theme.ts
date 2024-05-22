@@ -17,9 +17,19 @@ const colors = {
   UI_02: "#E4E4E4",
   UI_03: "#EEF1F1",
   UI_background: "#FFFFFF",
+
+  Black_Gra:
+    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%)",
+  Gray_stroke: "#CFCFCF",
 };
 
 const fonts = {
+  title_15pt_Bold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.5rem",
+    lineHeight: "2.1rem",
+  },
   title_14pt_Bold: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 700,
@@ -43,6 +53,12 @@ const fonts = {
     fontWeight: 700,
     fontSize: "2.6rem",
     lineHeight: "3.38rem",
+  },
+  sub_13pt_bold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.3rem",
+    lineHeight: "1.95rem",
   },
   sub_10pt: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
@@ -74,6 +90,12 @@ const fonts = {
     fontSize: "1.2rem",
     lineHeight: "1.44rem",
   },
+  sub_12pt_extraBold: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 900,
+    fontSize: "1.2rem",
+    lineHeight: "1.44rem",
+  },
   sub_14pt: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
     fontWeight: 400,
@@ -91,6 +113,12 @@ const fonts = {
     fontWeight: 600,
     fontSize: "1.1rem",
     lineHeight: "1.32rem",
+  },
+  ranking_title_14pt: {
+    fontFamily: "Apple SD Gothic Neo",
+    fontSize: "1.4rem",
+    fontWeight: 800,
+    lineHeight: "1.68rem",
   },
 };
 

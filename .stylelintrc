@@ -6,13 +6,11 @@
     "declaration-empty-line-before": [
       "never",
       {
-        "ignore": [
-          "after-comment",
-          "after-declaration",
-          "inside-single-line-block"
-        ]
+        "ignore": ["after-comment", "after-declaration", "inside-single-line-block"]
       }
     ],
+    "custom-property-pattern": null,
+    "selector-class-pattern": null,
 
     "order/order": ["custom-properties", "declarations"],
 
