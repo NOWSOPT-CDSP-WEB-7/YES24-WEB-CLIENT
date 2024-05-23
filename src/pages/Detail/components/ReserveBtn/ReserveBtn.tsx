@@ -1,13 +1,13 @@
 import * as S from "./ReserveBtn.styled";
 import { postBooking } from "../../../../apis/Detail/postBooking";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ReserveBtn = () => {
-  // const runShowId = useParams();
+  const runShowId = useParams();
 
   const postData = async () => {
     try {
-      postBooking(Number(10));
+      postBooking(Number(runShowId));
     } catch (error) {
       console.error(error);
     }
