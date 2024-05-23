@@ -30,7 +30,7 @@ const SearchedShow = ({ show }: { show: SearchResultPropTypes }) => {
   return (
     <>
       <S.ShowWrapper onClick={handleShowClick}>
-        <S.ShowImg src={showImg} />
+        <S.ShowImg src={image} />
         <S.ShowRightSec>
           <S.ShowStatusBtns>
             <S.StatusBtn color={"Text_01"} backcolor={"UI_02"}>
