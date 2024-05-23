@@ -32,14 +32,14 @@ const genreToFilter: GenreToFilterPropTypes = {
 };
 
 const Filters = ({ genres }: FiltersPropTypes) => {
-  const genreCounts = genres.reduce<{ [key: string]: number }>((acc, genre) => {
+  const genreCounts = genres.reduce<{ [key: string]: number }>((genreCount, genre) => {
     const filterNames = genreToFilter[genre];
     if (filterNames) {
       filterNames.forEach((filterName) => {
-        acc[filterName] = (acc[filterName] || 0) + 1;
+        genreCount[filterName] = (genreCount[filterName] || 0) + 1;
       });
     }
-    return acc;
+    return genreCount;
   }, {});
 
   const totalCount = genres.length;
