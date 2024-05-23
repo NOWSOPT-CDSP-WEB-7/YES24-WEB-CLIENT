@@ -1,13 +1,63 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as S from "./Filters.styled";
 import { IcDropDown } from "../../../../assets/icons";
 
-const filters = ["전체(136)", "뮤지컬/연극(116)", "클래식/무용(5)", "전시/행사(15)"];
 const options = ["정확도순", "공연임박순", "판매많은순"];
-const Filters = () => {
+
+interface FixedFilterPropTypes {
+  name: string;
+}
+interface GenreToFilterPropTypes {
+  [key: string]: string[];
+}
+interface FiltersPropTypes {
+  genres: string[];
+}
+// 고정된 필터 이름 배열
+const fixedFilters: FixedFilterPropTypes[] = [
+  { name: "전체" },
+  { name: "뮤지컬/연극" },
+  { name: "클래식/무용" },
+  { name: "전시/행사" },
+];
+
+// 각 장르가 어떤 필터에 속하는지 정의
+const genreToFilter: GenreToFilterPropTypes = {
+  musical: ["뮤지컬/연극"],
+  theater: ["뮤지컬/연극"],
+  classic: ["클래식/무용"],
+  dancing: ["클래식/무용"],
+  exhibition: ["전시/행사"],
+  event: ["전시/행사"],
+};
+
+const Filters = ({ genres }: FiltersPropTypes) => {
+  const genreCounts = genres.reduce<{ [key: string]: number }>((genreCount, genre) => {
+    const filterNames = genreToFilter[genre];
+    if (filterNames) {
+      filterNames.forEach((filterName) => {
+        genreCount[filterName] = (genreCount[filterName] || 0) + 1;
+      });
+    }
+    return genreCount;
+  }, {});
+
+  const totalCount = genres.length;
+
+  const filters = fixedFilters.map((filter) => {
+    const count = filter.name === "전체" ? totalCount : genreCounts[filter.name] || 0;
+    return `${filter.name}(${count})`;
+  });
+
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (filters.length > 0) {
+      setActiveFilter(filters[0]);
+    }
+  }, [filters]);
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
@@ -19,7 +69,7 @@ const Filters = () => {
     setSelectedOption(option);
     setIsOpen(false);
   };
-  console.log(isOpen);
+
   return (
     <>
       <S.FiltersWrapper>
@@ -33,11 +83,11 @@ const Filters = () => {
         })}
       </S.FiltersWrapper>
       <S.FilterResultAndSort>
-        <S.FilterResult>총 116개의 검색 결과가 나왔습니다.</S.FilterResult>
+        <S.FilterResult>총 {totalCount}개의 검색 결과가 나왔습니다.</S.FilterResult>
         <S.SortBox>
-          <S.SelectSortWrapper>
+          <S.SelectSortWrapper onClick={toggleDropdown}>
             <S.SelectedSort>{selectedOption}</S.SelectedSort>
-            <S.DropdownBtn onClick={toggleDropdown}>
+            <S.DropdownBtn>
               <IcDropDown />
             </S.DropdownBtn>
           </S.SelectSortWrapper>

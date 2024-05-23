@@ -57,7 +57,9 @@ export const SelectedSort = styled.span`
   padding: 0.5rem;
 
   color: ${({ theme }) => theme.colors.Text_01};
+
   ${({ theme }) => theme.fonts.sub_12pt};
+  cursor: pointer;
 `;
 export const DropdownBtn = styled.button`
   display: flex;
@@ -87,6 +89,7 @@ export const SortItem = styled.li`
   white-space: nowrap;
 
   ${({ theme }) => theme.fonts.dropdown_11pt};
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.colors.Secondary_orange};
