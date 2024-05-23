@@ -1,5 +1,6 @@
 import DeleteAllBtn from "@components/commons/DeleteAllBtn/DeleteAllBtn";
 import SearchedShow from "../../../../components/commons/SearchedShow/SearchedShow";
+import * as S from "./RecentShows.styled";
 import { useEffect, useState } from "react";
 
 interface SearchResultPropTypes {
@@ -28,7 +29,7 @@ const RecentShows = () => {
     setRecentShows([]);
   };
   if (recentShows.length === 0) {
-    return <div>최근 검색 공연이 없습니다</div>;
+    return <S.NoRecentShows>최근 검색 공연이 없습니다</S.NoRecentShows>;
   }
   console.log(recentShows);
   return (
