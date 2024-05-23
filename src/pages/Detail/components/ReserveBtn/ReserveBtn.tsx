@@ -3,11 +3,12 @@ import { postBooking } from "../../../../apis/Detail/postBooking";
 import { useParams } from "react-router-dom";
 
 const ReserveBtn = () => {
-  const runShowId = useParams();
+  const { runShowId } = useParams();
 
   const postData = async () => {
     try {
       postBooking(Number(runShowId));
+      alert("예매가 완료되었습니다.");
     } catch (error) {
       console.error(error);
     }
