@@ -4,8 +4,17 @@ import { IcDropDown } from "../../../../assets/icons";
 
 const options = ["정확도순", "공연임박순", "판매많은순"];
 
+interface FixedFilterPropTypes {
+  name: string;
+}
+interface GenreToFilterPropTypes {
+  [key: string]: string[];
+}
+interface FiltersPropTypes {
+  genres: string[];
+}
 // 고정된 필터 이름 배열
-const fixedFilters = [
+const fixedFilters: FixedFilterPropTypes[] = [
   { name: "전체" },
   { name: "뮤지컬/연극" },
   { name: "클래식/무용" },
@@ -13,7 +22,7 @@ const fixedFilters = [
 ];
 
 // 각 장르가 어떤 필터에 속하는지 정의
-const genreToFilter = {
+const genreToFilter: GenreToFilterPropTypes = {
   musical: ["뮤지컬/연극"],
   theater: ["뮤지컬/연극"],
   classic: ["클래식/무용"],
@@ -22,8 +31,8 @@ const genreToFilter = {
   event: ["전시/행사"],
 };
 
-const Filters = ({ genres }) => {
-  const genreCounts = genres.reduce((acc, genre) => {
+const Filters = ({ genres }: FiltersPropTypes) => {
+  const genreCounts = genres.reduce<{ [key: string]: number }>((acc, genre) => {
     const filterNames = genreToFilter[genre];
     if (filterNames) {
       filterNames.forEach((filterName) => {
