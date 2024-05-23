@@ -42,6 +42,8 @@ const SearchBar = () => {
 
     if (location.pathname === "/search") {
       navigate("list");
+    } else {
+      window.location.reload();
     }
   };
   const handleKeyPress = (e: { key: string }) => {
