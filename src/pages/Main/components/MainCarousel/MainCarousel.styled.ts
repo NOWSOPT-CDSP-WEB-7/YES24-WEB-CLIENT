@@ -10,6 +10,7 @@ export const SwiperCard = styled.div<{ imgsrc: string }>`
   height: 38.3rem;
 
   background-image: url(${(props) => props.imgsrc});
+  background-size: cover;
   border-radius: 0.5rem;
 `;
 
