@@ -123,6 +123,15 @@ export const SwiperCardInfo = styled.div`
   ${({ theme }) => theme.fonts.sub_12pt};
 `;
 
+export const PlaceInfo = styled.div`
+  /* 위치 조정의 편의를 위해, 한줄 넘어갈 경우 ... 처리 */
+  width: 15rem;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
 export const BottomButton = styled.button`
   display: flex;
   width: 35.5rem;

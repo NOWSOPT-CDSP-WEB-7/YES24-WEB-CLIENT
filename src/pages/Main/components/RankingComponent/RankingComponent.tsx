@@ -77,18 +77,18 @@ const RankingComponent = () => {
           className={"rankingSwiper"}
         >
           {rankResponse.map(
-            (item: RankResponseObjPropTypes) =>
+            (item: RankResponseObjPropTypes, index: number) =>
               selectedTab === item.genre && (
                 <SwiperSlide key={item.id}>
                   <S.SwiperCard>
                     <S.SwiperCardImg imgsrc={item.image}>
-                      <S.SwiperCardImgGradation>{item.id}</S.SwiperCardImgGradation>
+                      <S.SwiperCardImgGradation>{(index % 3) + 1}</S.SwiperCardImgGradation>
                     </S.SwiperCardImg>
                     <S.SwiperCardContents>
                       <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>
                       <S.SwiperCardInfo>
                         <div>{formatData(item.period)}</div>
-                        <div>{item.place}</div>
+                        <S.PlaceInfo>{item.place}</S.PlaceInfo>
                       </S.SwiperCardInfo>
                     </S.SwiperCardContents>
                   </S.SwiperCard>
