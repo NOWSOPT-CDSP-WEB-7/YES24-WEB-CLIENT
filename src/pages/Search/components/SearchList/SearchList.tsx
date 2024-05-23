@@ -1,13 +1,12 @@
 import useGetSearchResult from "../../../../hooks/useGetSearchResult.ts";
 import * as S from "./SearchList.styled.ts";
-import showImg from "../../../../assets/images/show.png";
 
 interface InputPropTypes {
   input: string;
 }
 
 const SearchList = ({ input }: InputPropTypes) => {
-  const { searchResult } = useGetSearchResult();
+  const { searchResult } = useGetSearchResult(input);
 
   const highlightText = (text: string, searchInput: string) => {
     const regex = new RegExp(`(${searchInput})`, "gi");
@@ -36,7 +35,7 @@ const SearchList = ({ input }: InputPropTypes) => {
     <S.SearchListWrapper>
       {filteredResult.map((item) => (
         <S.SearchLi key={item.id}>
-          <S.LiImg src={showImg} alt="showimg" />
+          <S.LiImg src={item.image} alt="showimg" />
           <S.LiTextBox>
             {highlightLocation(item.location, input)}
             <S.LiTitle>{highlightText(item.title, input)}</S.LiTitle>

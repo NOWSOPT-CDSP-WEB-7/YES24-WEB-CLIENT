@@ -34,7 +34,7 @@ const FiltersAndResult = () => {
     const result = await getSearchResult(word);
     setSearchResult(result);
 
-    const extractedGenres = result.map((item) => item.genre);
+    const extractedGenres = result.map((item: SearchResultPropTypes) => item.genre);
     setGenres(extractedGenres);
   };
   return (
