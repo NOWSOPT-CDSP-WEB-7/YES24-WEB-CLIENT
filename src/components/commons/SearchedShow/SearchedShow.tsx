@@ -1,5 +1,4 @@
 import * as S from "./SearchedShow.styled";
-import showImg from "../../../assets/images/show.png";
 import { useNavigate } from "react-router-dom";
 
 interface SearchResultPropTypes {

@@ -17,6 +17,7 @@ const FiltersAndResult = () => {
   const [searchResult, setSearchResult] = useState<SearchResultPropTypes[]>([]);
   const [genres, setGenres] = useState<string[]>([]);
   const [searchWord, setSearchWord] = useState<string | null>(null);
+  const [filteredGenres, setFilteredGenres] = useState<string[]>([]);
 
   useEffect(() => {
     const storedSearchWord = localStorage.getItem("searchWord");
@@ -30,6 +31,7 @@ const FiltersAndResult = () => {
       fetchSearchResults(searchWord);
     }
   }, [searchWord]);
+
   const fetchSearchResults = async (word: string) => {
     const result = await getSearchResult(word);
     setSearchResult(result);
@@ -37,10 +39,20 @@ const FiltersAndResult = () => {
     const extractedGenres = result.map((item: SearchResultPropTypes) => item.genre);
     setGenres(extractedGenres);
   };
+
+  const handleGenreClick = (clickedGenres: string[]) => {
+    setFilteredGenres(clickedGenres);
+  };
+
+  const filteredResults =
+    filteredGenres.length > 0
+      ? searchResult.filter((result) => filteredGenres.includes(result.genre))
+      : searchResult;
+
   return (
     <>
-      <Filters genres={genres} />
-      <FilteredResultList searchResult={searchResult} />
+      <Filters genres={genres} handleGenreClick={handleGenreClick} />
+      <FilteredResultList searchResult={filteredResults} />
     </>
   );
 };
