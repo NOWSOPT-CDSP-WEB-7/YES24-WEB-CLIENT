@@ -22,6 +22,11 @@ const RecentShows = () => {
       localStorage.setItem("recentShows", JSON.stringify([]));
     }
   }, []);
+
+  const handleDeleteAll = () => {
+    localStorage.removeItem("recentShows");
+    setRecentShows([]);
+  };
   if (recentShows.length === 0) {
     return <div>최근 검색 공연이 없습니다</div>;
   }
@@ -31,7 +36,7 @@ const RecentShows = () => {
       {recentShows.length !== 0 &&
         recentShows.map((recentShow) => <SearchedShow show={recentShow} key={recentShow.id} />)}
 
-      <DeleteAllBtn />
+      <DeleteAllBtn handleDelete={handleDeleteAll} />
     </>
   );
 };
