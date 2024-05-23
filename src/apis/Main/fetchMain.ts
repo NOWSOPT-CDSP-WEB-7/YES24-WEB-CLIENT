@@ -21,10 +21,8 @@ export const fetchMain = async (): Promise<MainResponsePropTypes> => {
       },
     });
     const responseArr = response.data.data;
-    console.log("첫번째 리스폰스:", responseArr);
     return responseArr;
   } catch (error) {
-    console.log("에러발생 :", error);
     return []; //이거 트슈 !
   }
 };

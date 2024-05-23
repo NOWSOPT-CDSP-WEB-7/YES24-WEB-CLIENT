@@ -16,7 +16,6 @@ const RankingComponent = () => {
     period: string;
     place: string;
     genre: string;
-    ranking: number;
     image: string;
   }
 
@@ -26,7 +25,11 @@ const RankingComponent = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await fetchRank();
+      //같은 data에 대해 서로 다른 정보들을 서버에서 담아주어, 배열 형태로 와서 추가해준 코드
+      /*const flatedData = [];
+      data.map*/
       setRankResponse(data);
+      console.log(data);
     };
     getData();
   }, []);
@@ -79,7 +82,7 @@ const RankingComponent = () => {
                 <SwiperSlide key={item.id}>
                   <S.SwiperCard>
                     <S.SwiperCardImg imgsrc={item.image}>
-                      <S.SwiperCardImgGradation>{item.ranking}</S.SwiperCardImgGradation>
+                      <S.SwiperCardImgGradation>{item.id}</S.SwiperCardImgGradation>
                     </S.SwiperCardImg>
                     <S.SwiperCardContents>
                       <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>

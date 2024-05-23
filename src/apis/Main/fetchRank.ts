@@ -6,7 +6,6 @@ interface RankResponseObjPropTypes {
   period: string;
   place: string;
   genre: string;
-  ranking: number;
   image: string;
 }
 

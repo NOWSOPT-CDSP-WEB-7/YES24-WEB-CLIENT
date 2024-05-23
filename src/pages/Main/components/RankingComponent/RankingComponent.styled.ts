@@ -70,6 +70,7 @@ export const SwiperCardImg = styled.div<{ imgsrc: string }>`
   padding-top: 9.5rem;
 
   background-image: url(${({ imgsrc }) => imgsrc});
+  background-size: cover;
   border-radius: 0.4rem;
 `;
 
