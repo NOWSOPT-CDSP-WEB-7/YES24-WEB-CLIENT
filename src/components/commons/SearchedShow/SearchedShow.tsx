@@ -17,6 +17,14 @@ const SearchedShow = ({ show }: { show: SearchResultPropTypes }) => {
   const navigate = useNavigate();
 
   const handleShowClick = () => {
+    const recentShows = localStorage.getItem("recentShows");
+    let recentShowsList = recentShows ? JSON.parse(recentShows) : [];
+
+    recentShowsList = recentShowsList.filter((item: SearchResultPropTypes) => item.id !== id);
+
+    recentShowsList.unshift(show);
+
+    localStorage.setItem("recentShows", JSON.stringify(recentShowsList));
     navigate(`/detail/${id}`);
   };
   return (
