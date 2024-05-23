@@ -5,6 +5,7 @@ export const EntireWrapper = styled.div``;
 export const CategoryWrapper = styled.section`
   position: sticky;
   top: 0;
+  z-index: 3;
   display: flex;
   gap: 0.8rem;
   width: 100%;
@@ -25,8 +26,8 @@ export const Category = styled.article<{ $isSelected: boolean }>`
   color: ${({ $isSelected, theme }) =>
     $isSelected ? theme.colors.Primary_Black : theme.colors.Text_02};
 
+  cursor: pointer;
   border-bottom: 2px solid
     ${({ $isSelected, theme }) => ($isSelected ? theme.colors.Primary_orange : theme.colors.UI_03)};
-
   ${({ theme }) => theme.fonts.title_14pt_Bold};
 `;

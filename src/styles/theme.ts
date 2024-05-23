@@ -18,6 +18,8 @@ const colors = {
   UI_03: "#EEF1F1",
   UI_background: "#FFFFFF",
 
+  Black_Gra:
+    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.8) 100%)",
   Gray_stroke: "#CFCFCF",
 };
 
@@ -33,6 +35,12 @@ const fonts = {
     fontWeight: 700,
     fontSize: "1.4rem",
     lineHeight: "2.1rem",
+  },
+  title_18pt: {
+    fontFamily: "'Apple SD Gothic Neo', sans-serif",
+    fontWeight: 700,
+    fontSize: "1.8rem",
+    lineHeight: "2.34rem",
   },
   title_18pt_Bold: {
     fontFamily: "'Apple SD Gothic Neo', sans-serif",
@@ -105,6 +113,12 @@ const fonts = {
     fontWeight: 600,
     fontSize: "1.1rem",
     lineHeight: "1.32rem",
+  },
+  ranking_title_14pt: {
+    fontFamily: "Apple SD Gothic Neo",
+    fontSize: "1.4rem",
+    fontWeight: 800,
+    lineHeight: "1.68rem",
   },
 };
 

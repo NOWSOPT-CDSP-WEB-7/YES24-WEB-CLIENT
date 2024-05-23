@@ -1,4 +1,5 @@
 import { ShowDetailPropTypes } from "../pages/Detail/types/showDetailTypes";
+import showImage from "/src/assets/images/detailPoster.png";
 
 export const SHOW_DETAIL: ShowDetailPropTypes = {
   data: [
@@ -10,7 +11,7 @@ export const SHOW_DETAIL: ShowDetailPropTypes = {
       filmRating: 8,
       location: "울산",
       place: "울산문화예술회관 대공연장",
-      image: "src/assets/images/show.png",
+      image: showImage,
       runtime: 175,
     },
   ],

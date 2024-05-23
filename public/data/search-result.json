@@ -1,0 +1,51 @@
+{
+  "status": 200,
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "뮤지컬 [레베카] 10주년 기념 공연 앙코르",
+      "period": "2024.04.13 ~ 2024.04.14",
+      "location": "서울",
+      "place": "울산문화예술회관 대공연장",
+      "genre": "musical",
+      "image": "imgUrl"
+    },
+    {
+      "id": 2,
+      "title": "뮤지컬 [레베카] 10주년 기념 공연 앙코르",
+      "period": "2024.04.13 ~ 2024.04.14",
+      "location": "울산",
+      "place": "울산문화예술회관 대공연장",
+      "genre": "musical",
+      "image": "imgUrl"
+    },
+    {
+      "id": 3,
+      "title": "뮤지컬 [레베카] 10주년 기념 공연 앙코르",
+      "period": "2024.04.13 ~ 2024.04.14",
+      "location": "울산",
+      "place": "울산문화예술회관 대공연장",
+      "genre": "musical",
+      "image": "imgUrl"
+    },
+    {
+      "id": 4,
+      "title": "뮤지컬 [레베카] 10주년 기념 공연 앙코르",
+      "period": "2024.04.13 ~ 2024.04.14",
+      "location": "부산",
+      "place": "울산문화예술회관 대공연장",
+      "genre": "musical",
+      "image": "imgUrl"
+    },
+    {
+      "id": 5,
+      "title": "뮤지컬 [레베카] 10주년 기념 공연 앙코르",
+      "period": "2024.04.13 ~ 2024.04.14",
+      "location": "울산",
+      "place": "울산문화예술회관 대공연장",
+      "genre": "musical",
+      "image": "imgUrl"
+    }
+  ]
+}
