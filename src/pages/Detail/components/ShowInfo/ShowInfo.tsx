@@ -11,12 +11,16 @@ const ShowInfo = () => {
   const { runShowId } = useParams();
   const [showData, setShowData] = useState<ShowDetailPropTypes>();
   const [isLike, setIsLike] = useState(false);
+  const [isLikeCount, setIsLikeCount] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await fetchShowDetail(Number(runShowId));
         setShowData(data);
+        setIsLikeCount(data?.likeCount ?? 0);
+        const initialLike = await patchLike(Number(runShowId));
+        setIsLike(initialLike ?? false);
       } catch (error) {
         console.error(error);
       }
@@ -24,17 +28,12 @@ const ShowInfo = () => {
     fetchData();
   }, [runShowId]);
 
+  // 좋아요 버튼 눌렀을 때 동작하는 핸들러
   const handleLikeClick = async () => {
     try {
-      const likeStatus = await patchLike(Number(runShowId));
-      setIsLike(likeStatus ?? false);
-      setShowData((prevData) => {
-        if (!prevData) {
-          return prevData;
-        }
-        const updatedLikeCount = likeStatus ? prevData.likeCount + 1 : prevData.likeCount - 1;
-        return { ...prevData, likeCount: updatedLikeCount };
-      });
+      const likeStatus = !isLike;
+      setIsLike(likeStatus);
+      setIsLikeCount((prev) => (likeStatus ? prev + 1 : prev - 1));
     } catch (error) {
       console.error(error);
     }
@@ -66,7 +65,7 @@ const ShowInfo = () => {
             <S.BtnLayout>
               <S.HeartBtnBox onClick={handleLikeClick}>
                 {isLike ? <IcHeartFill /> : <IcHeartEmpty />}
-                <S.HeartNum>{showData?.likeCount}</S.HeartNum>
+                <S.HeartNum>{isLikeCount}</S.HeartNum>
               </S.HeartBtnBox>
               <IcBtnShare />
             </S.BtnLayout>
