@@ -12,21 +12,21 @@ jobs:
     steps:
       - name: Checkout develop
         uses: actions/checkout@v4
-        with: 
+        with:
           token: ${{ secrets.FORKED_REPO_TOKEN }}
           fetch-depth: 0
-          ref: main
+          ref: develop
 
       - name: Add remote-url
         run: |
           git remote add forked-repo https://namdaeun:${{ secrets.FORKED_REPO_TOKEN }}@github.com/namdaeun/YES24-WEB-CLIENT
           git config user.name namdaeun
           git config user.email nde40345@gmail.com
-      
-      - name: Push changes to forked-repo 
+
+      - name: Push changes to forked-repo
         run: |
           git push -f forked-repo main
-      
+
       - name: Clean up
         run: |
           git remote remove forked-repo
