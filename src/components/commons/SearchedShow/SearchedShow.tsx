@@ -1,5 +1,6 @@
 import * as S from "./SearchedShow.styled";
 import showImg from "../../../assets/images/show.png";
+import { useNavigate } from "react-router-dom";
 
 interface SearchResultPropTypes {
   id: number;
@@ -12,10 +13,15 @@ interface SearchResultPropTypes {
 }
 
 const SearchedShow = ({ show }: { show: SearchResultPropTypes }) => {
-  const { title, image, location, period, place } = show;
+  const { id, title, image, location, period, place } = show;
+  const navigate = useNavigate();
+
+  const handleShowClick = () => {
+    navigate(`/detail/${id}`);
+  };
   return (
     <>
-      <S.ShowWrapper>
+      <S.ShowWrapper onClick={handleShowClick}>
         <S.ShowImg src={showImg} />
         <S.ShowRightSec>
           <S.ShowStatusBtns>
