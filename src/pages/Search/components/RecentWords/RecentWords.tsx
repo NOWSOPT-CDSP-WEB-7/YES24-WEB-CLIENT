@@ -22,13 +22,18 @@ const RecentWords = () => {
     localStorage.removeItem("recentWordsList");
     setWords([]);
   };
+  const handleDeleteWord = (word: string) => {
+    const updatedWords = words.filter((w) => w !== word);
+    localStorage.setItem("recentWordsList", JSON.stringify(updatedWords));
+    setWords(updatedWords);
+  };
   return (
     <>
       <S.Wrapper>
         {words && (
           <div>
             {words.map((word, i) => {
-              return <RecentWord key={i} word={word} />;
+              return <RecentWord key={i} word={word} onDelete={handleDeleteWord} />;
             })}
           </div>
         )}
