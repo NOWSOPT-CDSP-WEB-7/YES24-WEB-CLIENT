@@ -76,9 +76,9 @@ const Filters = ({ genres }) => {
       <S.FilterResultAndSort>
         <S.FilterResult>총 {totalCount}개의 검색 결과가 나왔습니다.</S.FilterResult>
         <S.SortBox>
-          <S.SelectSortWrapper>
+          <S.SelectSortWrapper onClick={toggleDropdown}>
             <S.SelectedSort>{selectedOption}</S.SelectedSort>
-            <S.DropdownBtn onClick={toggleDropdown}>
+            <S.DropdownBtn>
               <IcDropDown />
             </S.DropdownBtn>
           </S.SelectSortWrapper>
