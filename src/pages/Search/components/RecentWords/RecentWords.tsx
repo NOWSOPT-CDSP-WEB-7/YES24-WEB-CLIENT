@@ -38,7 +38,7 @@ const RecentWords = () => {
           </div>
         )}
       </S.Wrapper>
-      <DeleteAllBtn onClick={handleDeleteAll} />
+      <DeleteAllBtn handleDelete={handleDeleteAll} />
     </>
   );
 };

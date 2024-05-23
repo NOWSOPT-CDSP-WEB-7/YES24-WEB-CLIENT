@@ -1,12 +1,12 @@
 import * as S from "./DeleteAllBtn.styled";
 
 interface DeleteAllPropTypes {
-  onClick: () => void;
+  handleDelete: () => void;
 }
 
-const DeleteAllBtn = ({ onClick }: DeleteAllPropTypes) => {
+const DeleteAllBtn = ({ handleDelete }: DeleteAllPropTypes) => {
   return (
-    <S.BtnContainer onClick={onClick}>
+    <S.BtnContainer onClick={handleDelete}>
       <S.DeleteBtn>전체삭제</S.DeleteBtn>
     </S.BtnContainer>
   );
