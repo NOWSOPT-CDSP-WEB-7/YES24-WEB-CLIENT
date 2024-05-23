@@ -3,17 +3,13 @@ import { IcCancel } from "../../../../assets/icons";
 
 interface WordPropTypes {
   word: string;
-  onDelete: (word: string) => void;
 }
 
-const RecentWord = ({ word, onDelete }: WordPropTypes) => {
-  const handleWordDelete = () => {
-    onDelete(word);
-  };
+const RecentWord = ({ word }: WordPropTypes) => {
   return (
     <S.WordWrapper>
       <S.Word>{word}</S.Word>
-      <S.CancelBtn onClick={handleWordDelete}>
+      <S.CancelBtn>
         <IcCancel />
       </S.CancelBtn>
     </S.WordWrapper>
