@@ -26,17 +26,23 @@ const SearchBar = () => {
     }
   }, [setInput, location.pathname]);
 
+  const updateRecentWordsList = (newWord: string) => {
+    localStorage.setItem("searchWord", newWord);
+    const updatedRecentWordsList = [newWord, ...recentWordsList.filter((word) => word !== newWord)];
+    setRecentWordsList(updatedRecentWordsList);
+    localStorage.setItem("recentWordsList", JSON.stringify(updatedRecentWordsList));
+  };
+
   const handleSearchClick = async () => {
     if (input.trim().length === 0) {
       return;
     }
 
-    localStorage.setItem("searchWord", input);
-    const updatedRecentWordsList = [input, ...recentWordsList.filter((word) => word !== input)];
-    setRecentWordsList(updatedRecentWordsList);
-    localStorage.setItem("recentWordsList", JSON.stringify(updatedRecentWordsList));
+    updateRecentWordsList(input);
 
-    navigate("list");
+    if (location.pathname === "/search") {
+      navigate("list");
+    }
   };
   const handleKeyPress = (e: { key: string }) => {
     if (e.key === "Enter") {
