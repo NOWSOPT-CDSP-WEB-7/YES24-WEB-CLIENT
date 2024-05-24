@@ -9,6 +9,7 @@ import MainCategory from "./components/MainCategory/MainCategory";
 import Modal from "./components/Modal/Modal";
 import RankingComponent from "./components/RankingComponent/RankingComponent";
 import TicketOpen from "./components/TicketOpen/TicketOpen";
+import * as S from "./Main.styled";
 
 const Main = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +23,7 @@ const Main = () => {
     navigate("/search");
   };
   return (
-    <>
+    <S.MainPageWrapper>
       {showModal && <Modal isOpen={showModal} setShowModal={setShowModal} />}
       <Header navigateSearch={navigateSearch} />
       <MainCarousel />
@@ -36,7 +37,7 @@ const Main = () => {
       <IcDevider10px />
       <CardBanner />
       <Footer />
-    </>
+    </S.MainPageWrapper>
   );
 };
 
