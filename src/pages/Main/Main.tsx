@@ -21,7 +21,6 @@ const Main = () => {
   const navigateSearch = () => {
     navigate("/search");
   };
-
   return (
     <>
       {showModal && <Modal isOpen={showModal} setShowModal={setShowModal} />}

@@ -33,6 +33,8 @@ export const InfoWithBtnLayout = styled.section`
 `;
 
 export const ShowImage = styled.img`
+  width: 9.8rem;
+  height: 12rem;
   padding-bottom: 1.4rem;
 `;
 

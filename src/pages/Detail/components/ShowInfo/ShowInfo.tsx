@@ -14,7 +14,7 @@ const ShowInfo = () => {
               [{location}] {title}
             </S.Title>
             <S.ShowContentLayout>
-              <S.ShowImage src={image} />
+              <S.ShowImage src={image} alt="공연 포스터" />
               <S.InfoWithBtnLayout>
                 <S.ShowInfoContainer>
                   <S.CategoryBox>

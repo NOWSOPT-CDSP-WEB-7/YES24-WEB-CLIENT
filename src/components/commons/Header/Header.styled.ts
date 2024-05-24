@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  display: flex;
   position: fixed;
+  z-index: 2;
   display: flex;
-  width: 100%;
+  width: 37.5rem;
   padding: 0.5rem 0 0.5rem 1rem;
 
   background-color: ${({ theme }) => theme.colors.UI_background};
