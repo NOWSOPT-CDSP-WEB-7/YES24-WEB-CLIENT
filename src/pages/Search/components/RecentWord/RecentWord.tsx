@@ -19,8 +19,8 @@ const RecentWord = ({ word, onDelete }: WordPropTypes) => {
   };
 
   return (
-    <S.WordWrapper onClick={() => handleRecentWordClick(word)}>
-      <S.Word>{word}</S.Word>
+    <S.WordWrapper>
+      <S.Word onClick={() => handleRecentWordClick(word)}>{word}</S.Word>
       <S.CancelBtn onClick={handleWordDelete}>
         <IcCancel />
       </S.CancelBtn>
