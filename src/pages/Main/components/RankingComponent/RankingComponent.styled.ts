@@ -70,6 +70,7 @@ export const SwiperCardImg = styled.div<{ imgsrc: string }>`
   padding-top: 9.5rem;
 
   background-image: url(${({ imgsrc }) => imgsrc});
+  background-size: cover;
   border-radius: 0.4rem;
 `;
 
@@ -120,6 +121,15 @@ export const SwiperCardInfo = styled.div`
 
   color: ${({ theme }) => theme.colors.Text_02};
   ${({ theme }) => theme.fonts.sub_12pt};
+`;
+
+export const PlaceInfo = styled.div`
+  /* 위치 조정의 편의를 위해, 한줄 넘어갈 경우 ... 처리 */
+  width: 15rem;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const BottomButton = styled.button`
