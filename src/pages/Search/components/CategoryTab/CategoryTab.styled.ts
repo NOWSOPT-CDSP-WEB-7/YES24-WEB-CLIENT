@@ -23,6 +23,7 @@ export const Category = styled.article<{ $isSelected: boolean }>`
   color: ${({ $isSelected, theme }) =>
     $isSelected ? theme.colors.Text_strong : theme.colors.Text_02};
 
+  cursor: pointer;
   border-bottom: 2px solid
     ${({ $isSelected, theme }) => ($isSelected ? `${theme.colors.Primary_orange}` : "transparent")};
   ${({ theme }) => theme.fonts.title_14pt_Bold};

@@ -28,9 +28,21 @@ const SearchBar = () => {
 
   const updateRecentWordsList = (newWord: string) => {
     localStorage.setItem("searchWord", newWord);
-    const updatedRecentWordsList = [newWord, ...recentWordsList.filter((word) => word !== newWord)];
-    setRecentWordsList(updatedRecentWordsList);
+
+    let updatedRecentWordsList: string[] = [];
+
+    const savedRecentWordsList = localStorage.getItem("recentWordsList");
+    if (savedRecentWordsList) {
+      updatedRecentWordsList = JSON.parse(savedRecentWordsList);
+    }
+
+    updatedRecentWordsList = [
+      newWord,
+      ...updatedRecentWordsList.filter((word) => word !== newWord),
+    ];
+
     localStorage.setItem("recentWordsList", JSON.stringify(updatedRecentWordsList));
+    setRecentWordsList(updatedRecentWordsList);
   };
 
   const handleSearchClick = async () => {
