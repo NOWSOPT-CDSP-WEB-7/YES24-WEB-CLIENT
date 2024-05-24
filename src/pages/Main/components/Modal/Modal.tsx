@@ -30,8 +30,8 @@ const Modal = ({ isOpen, setShowModal }: ModalPropTypes) => {
   return (
     <S.ModalWrapper ref={dialog}>
       <S.ModalBanner>
-        <img src={banner1} />
-        <img src={banner2} />
+        <img src={banner1} width={"335px"} height={"78px"} />
+        <img src={banner2} width={"335px"} height={"239px"} />
       </S.ModalBanner>
       <S.ModalBottomText>
         <S.ModalBottomTextLeft>
