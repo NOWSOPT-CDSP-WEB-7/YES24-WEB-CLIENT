@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   position: fixed;
+  left: 50%;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -10,6 +11,7 @@ export const HeaderWrapper = styled.header`
   padding: 0.5rem 0 0.5rem 1rem;
 
   background-color: ${({ theme }) => theme.colors.UI_background};
+  transform: translate(-50%, 0);
   cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.UI_03};
 `;

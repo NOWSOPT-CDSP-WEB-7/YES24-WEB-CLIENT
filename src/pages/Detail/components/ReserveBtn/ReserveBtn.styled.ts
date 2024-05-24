@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const BtnWrapper = styled.section`
   position: fixed;
   bottom: 0;
+  left: 50%;
   width: 37.5rem;
   padding: 2rem 1rem;
 
   background-color: ${({ theme }) => theme.colors.UI_background};
+  transform: translate(-50%, 0);
 `;
 
 export const Button = styled.button`
