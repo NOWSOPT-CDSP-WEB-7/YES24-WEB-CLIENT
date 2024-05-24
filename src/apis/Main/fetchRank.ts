@@ -21,6 +21,7 @@ export const fetchRank = async (): Promise<RankResponsePropTypes> => {
     const responseArr = response.data.data;
     return responseArr;
   } catch (error) {
+    console.log(error);
     return [];
   }
 };
