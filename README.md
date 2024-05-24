@@ -63,7 +63,7 @@ yes24 티켓 모바일 웹은 대한민국의 주요 온라인 티켓 예매 사
               <br />
         </td>
       <td style="min-width: 200px;">
-              <img src="https://github.com/NOWSOPT-CDSP-WEB-7/YES24-WEB-CLIENT/assets/96781926/0e101c9b-ad35-420a-b67b-2fe8ec1e6d6a" width="200" alt="화랑-프로필사진">
+              <img src="https://github.com/NOWSOPT-CDSP-WEB-7/YES24-WEB-CLIENT/assets/96781926/36d04336-ccbb-46a5-8da6-d1ee3b3f1c78" width="200" alt="화랑-프로필사진">
               <br />
         </td>
       <td style="min-width: 200px;">
