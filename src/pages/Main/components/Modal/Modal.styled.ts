@@ -7,7 +7,9 @@ export const ModalWrapper = styled.dialog`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
   align-items: flex-start;
+  justify-content: center;
   width: 37.5rem;
   padding: 2rem;
 
@@ -31,8 +33,9 @@ export const ModalBanner = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   align-self: stretch;
+  justify-content: center;
 `;
 
 export const ModalBottomText = styled.div`
