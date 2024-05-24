@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as S from "./Filters.styled";
 import { IcDropDown } from "../../../../assets/icons";
 
@@ -65,12 +65,6 @@ const Filters = ({ genres, handleGenreClick }: FiltersPropTypes) => {
   const [activeFilter, setActiveFilter] = useState<string>(filters[0]);
   const [selectedOption, setSelectedOption] = useState<string>(options[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (filters.length > 0) {
-      setActiveFilter(filters[0]);
-    }
-  }, [filters]);
 
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
