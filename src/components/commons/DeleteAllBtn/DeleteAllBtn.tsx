@@ -1,9 +1,9 @@
 import * as S from "./DeleteAllBtn.styled";
 
 interface DeleteAllPropTypes {
-
   handleDelete: () => void;
 }
+
 const DeleteAllBtn = ({ handleDelete }: DeleteAllPropTypes) => {
   return (
     <S.BtnContainer onClick={handleDelete}>

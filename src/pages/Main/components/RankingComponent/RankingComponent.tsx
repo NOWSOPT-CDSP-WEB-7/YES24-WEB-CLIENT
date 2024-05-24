@@ -1,3 +1,4 @@
+import { fetchRank } from "@apis/Main/fetchRank";
 import { IcChevronrRight } from "@assets/icons";
 import { formatData } from "@utils/formatData";
 import { useEffect, useState } from "react";
@@ -8,9 +9,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as S from "./RankingComponent.styled";
 import "./swiperStyles.css";
 
-import { RANKING_RESPONSE } from "@constants/rankingCarousel";
-
 const RankingComponent = () => {
+  interface RankResponseObjPropTypes {
+    id: number;
+    title: string;
+    period: string;
+    place: string;
+    genre: string;
+    image: string;
+  }
+
+  type RankResponsePropTypes = RankResponseObjPropTypes[];
+  const [rankResponse, setRankResponse] = useState<RankResponsePropTypes>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchRank();
+      //같은 data에 대해 서로 다른 정보들을 서버에서 담아주어, 배열 형태로 와서 추가해준 코드
+      /*const flatedData = [];
+      data.map*/
+      setRankResponse(data);
+      console.log(data);
+    };
+    getData();
+  }, []);
+
   const [selectedTab, setSelectedTab] = useState("concert");
 
   const handleClickTab = (tab: string) => {
@@ -53,19 +76,19 @@ const RankingComponent = () => {
           slidesOffsetAfter={-150}
           className={"rankingSwiper"}
         >
-          {RANKING_RESPONSE.data.map(
-            (item) =>
+          {rankResponse.map(
+            (item: RankResponseObjPropTypes, index: number) =>
               selectedTab === item.genre && (
                 <SwiperSlide key={item.id}>
                   <S.SwiperCard>
                     <S.SwiperCardImg imgsrc={item.image}>
-                      <S.SwiperCardImgGradation>{item.ranking}</S.SwiperCardImgGradation>
+                      <S.SwiperCardImgGradation>{(index % 3) + 1}</S.SwiperCardImgGradation>
                     </S.SwiperCardImg>
                     <S.SwiperCardContents>
                       <S.SwiperCardTitle>{item.title}</S.SwiperCardTitle>
                       <S.SwiperCardInfo>
                         <div>{formatData(item.period)}</div>
-                        <div>{item.place}</div>
+                        <S.PlaceInfo>{item.place}</S.PlaceInfo>
                       </S.SwiperCardInfo>
                     </S.SwiperCardContents>
                   </S.SwiperCard>

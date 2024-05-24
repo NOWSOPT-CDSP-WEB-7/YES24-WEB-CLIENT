@@ -25,4 +25,5 @@ export const TableImg = styled.img`
 export const Banner = styled.img`
   width: 37.5rem;
   height: 7rem;
+  display: block;
 `;

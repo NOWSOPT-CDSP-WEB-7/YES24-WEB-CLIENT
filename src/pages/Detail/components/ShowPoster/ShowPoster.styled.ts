@@ -8,3 +8,9 @@ export const Poster = styled.img`
   width: 35.5rem;
   height: 49.7rem;
 `;
+
+export const Banner = styled.img`
+  width: 37.5rem;
+  height: 7rem;
+  display: block;
+`;

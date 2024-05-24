@@ -23,6 +23,8 @@ export const CardWrapper = styled.article`
 export const CardImg = styled.img`
   width: 35.5rem;
   height: 14.6rem;
+
+  border-radius: 0.4rem;
 `;
 
 export const CardTextBox = styled.div`
@@ -35,6 +37,7 @@ export const CardTextBox = styled.div`
   padding: 1rem;
 
   background: ${({ theme }) => theme.colors.UI_background};
+  border-radius: 0.4rem;
 `;
 
 export const CardTitle = styled.div`

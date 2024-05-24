@@ -4,7 +4,6 @@ import Main from "./pages/Main/Main";
 import SearchListPage from "./pages/SearchListPage/SearchListPage";
 import Detail from "./pages/Detail/Detail";
 
-
 const Router = () => {
   return (
     <BrowserRouter>
@@ -12,7 +11,7 @@ const Router = () => {
         <Route path="/" element={<Main />} />
         <Route path="/search" element={<Search />} />
         <Route path="/search/list" element={<SearchListPage />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route path="/detail/:runShowId" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );

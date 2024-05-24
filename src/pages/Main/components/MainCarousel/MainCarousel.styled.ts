@@ -7,9 +7,10 @@ export const SwiperCard = styled.div<{ imgsrc: string }>`
   align-items: flex-end;
   justify-content: flex-end;
   width: 34rem;
-  height: 100%;
+  height: 38.3rem;
 
   background-image: url(${(props) => props.imgsrc});
+  background-size: cover;
   border-radius: 0.5rem;
 `;
 
