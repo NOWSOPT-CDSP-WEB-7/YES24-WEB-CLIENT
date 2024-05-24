@@ -7,10 +7,14 @@ export const WordWrapper = styled.article`
   width: 100%;
   padding: 1rem 1rem 1rem 2rem;
 
+  cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 export const Word = styled.span`
+  width: 100%;
+
   color: ${({ theme }) => theme.colors.Text_strong};
+
   ${({ theme }) => theme.fonts.sub_14pt};
 `;
 export const CancelBtn = styled.button`

@@ -1,13 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import useGetSearchResult from "../../../../hooks/useGetSearchResult.ts";
 import * as S from "./SearchList.styled.ts";
-import showImg from "../../../../assets/images/show.png";
 
 interface InputPropTypes {
   input: string;
 }
 
 const SearchList = ({ input }: InputPropTypes) => {
-  const { searchResult } = useGetSearchResult();
+  const { searchResult } = useGetSearchResult(input);
+  const navigate = useNavigate();
 
   const highlightText = (text: string, searchInput: string) => {
     const regex = new RegExp(`(${searchInput})`, "gi");
@@ -31,12 +32,14 @@ const SearchList = ({ input }: InputPropTypes) => {
       item.title.toLowerCase().includes(input.toLowerCase()) ||
       item.location.toLowerCase().includes(input.toLowerCase())
   );
-
+  const handleGoToDetail = (id: number) => {
+    navigate(`/detail/${id}`);
+  };
   return (
     <S.SearchListWrapper>
       {filteredResult.map((item) => (
-        <S.SearchLi key={item.id}>
-          <S.LiImg src={showImg} alt="showimg" />
+        <S.SearchLi key={item.id} onClick={() => handleGoToDetail(item.id)}>
+          <S.LiImg src={item.image} alt="showimg" />
           <S.LiTextBox>
             {highlightLocation(item.location, input)}
             <S.LiTitle>{highlightText(item.title, input)}</S.LiTitle>

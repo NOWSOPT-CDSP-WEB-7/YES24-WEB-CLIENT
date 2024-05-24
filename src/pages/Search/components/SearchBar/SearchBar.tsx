@@ -3,17 +3,15 @@ import { IcSearch, IcCancel } from "../../../../assets/icons";
 import useChangeInput from "../../../../hooks/useChangeInput.ts";
 import SearchList from "../SearchList/SearchList.tsx";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const SearchBar = () => {
   const { input, setInput, handleInputChange } = useChangeInput();
   const navigate = useNavigate();
   const location = useLocation();
-  const [recentWordsList, setRecentWordsList] = useState<string[]>([]);
 
   useEffect(() => {
     const savedInputWord = localStorage.getItem("searchWord");
-    const savedRecentWordsList = localStorage.getItem("recentWordsList");
     if (savedInputWord) {
       setInput(savedInputWord);
     }
@@ -21,15 +19,23 @@ const SearchBar = () => {
       localStorage.removeItem("searchWord");
       setInput("");
     }
-    if (savedRecentWordsList) {
-      setRecentWordsList(JSON.parse(savedRecentWordsList));
-    }
   }, [setInput, location.pathname]);
 
   const updateRecentWordsList = (newWord: string) => {
     localStorage.setItem("searchWord", newWord);
-    const updatedRecentWordsList = [newWord, ...recentWordsList.filter((word) => word !== newWord)];
-    setRecentWordsList(updatedRecentWordsList);
+
+    let updatedRecentWordsList: string[] = [];
+
+    const savedRecentWordsList = localStorage.getItem("recentWordsList");
+    if (savedRecentWordsList) {
+      updatedRecentWordsList = JSON.parse(savedRecentWordsList);
+    }
+
+    updatedRecentWordsList = [
+      newWord,
+      ...updatedRecentWordsList.filter((word) => word !== newWord),
+    ];
+
     localStorage.setItem("recentWordsList", JSON.stringify(updatedRecentWordsList));
   };
 
@@ -42,6 +48,8 @@ const SearchBar = () => {
 
     if (location.pathname === "/search") {
       navigate("list");
+    } else {
+      window.location.reload();
     }
   };
   const handleKeyPress = (e: { key: string }) => {

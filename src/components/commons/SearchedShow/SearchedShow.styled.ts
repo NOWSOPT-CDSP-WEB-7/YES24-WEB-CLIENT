@@ -11,6 +11,7 @@ export const ShowWrapper = styled.article`
   width: 100%;
   padding: 2rem 1rem;
 
+  cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 export const ShowImg = styled.img`

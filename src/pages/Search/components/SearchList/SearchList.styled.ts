@@ -16,6 +16,7 @@ export const SearchLi = styled.li`
   align-items: center;
   padding: 0.8rem 1rem;
 
+  cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.UI_02};
 `;
 export const LiImg = styled.img`
