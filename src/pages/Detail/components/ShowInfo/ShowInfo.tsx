@@ -1,30 +1,43 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IcBtnShare, IcHeartFill } from "../../../../assets/icons";
+import { IcBtnShare, IcHeartEmpty, IcHeartFill } from "../../../../assets/icons";
 import { categories } from "../../../../constants/showDetailCategory";
 
 import * as S from "./ShowInfo.styled";
 import { ShowDetailPropTypes, fetchShowDetail } from "../../../../apis/Detail/fetchShowDetail";
+import { patchLike } from "../../../../apis/Detail/patchLike";
 
 const ShowInfo = () => {
   const { runShowId } = useParams();
   const [showData, setShowData] = useState<ShowDetailPropTypes>();
+  const [isLike, setIsLike] = useState(false);
+  const [isLikeCount, setIsLikeCount] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (runShowId) {
-        try {
-          const data = await fetchShowDetail(Number(runShowId));
-          if (data) {
-            setShowData(data);
-          }
-        } catch (error) {
-          console.error(error);
-        }
+      try {
+        const data = await fetchShowDetail(Number(runShowId));
+        setShowData(data);
+        setIsLikeCount(data?.likeCount ?? 0);
+        const initialLike = await patchLike(Number(runShowId));
+        setIsLike(initialLike ?? false);
+      } catch (error) {
+        console.error(error);
       }
     };
     fetchData();
   }, [runShowId]);
+
+  // 좋아요 버튼 눌렀을 때 동작하는 핸들러
+  const handleLikeClick = async () => {
+    try {
+      const likeStatus = !isLike;
+      setIsLike(likeStatus);
+      setIsLikeCount((prev) => (likeStatus ? prev + 1 : prev - 1));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
@@ -50,9 +63,9 @@ const ShowInfo = () => {
               </S.InfoBox>
             </S.ShowInfoContainer>
             <S.BtnLayout>
-              <S.HeartBtnBox>
-                <IcHeartFill />
-                <S.HeartNum>{showData?.likeCount}</S.HeartNum>
+              <S.HeartBtnBox onClick={handleLikeClick}>
+                {isLike ? <IcHeartFill /> : <IcHeartEmpty />}
+                <S.HeartNum>{isLikeCount}</S.HeartNum>
               </S.HeartBtnBox>
               <IcBtnShare />
             </S.BtnLayout>
