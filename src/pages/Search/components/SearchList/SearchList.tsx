@@ -32,7 +32,7 @@ const SearchList = ({ input }: InputPropTypes) => {
       item.title.toLowerCase().includes(input.toLowerCase()) ||
       item.location.toLowerCase().includes(input.toLowerCase())
   );
-  const handleGoToDetail = (id) => {
+  const handleGoToDetail = (id: number) => {
     navigate(`/detail/${id}`);
   };
   return (
