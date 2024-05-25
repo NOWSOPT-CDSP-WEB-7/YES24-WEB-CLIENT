@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
     html, body{
         width: 37.5rem;
+        margin: 0 auto;
         overflow-x :  hidden;
         scroll-behavior: smooth;
     }
